@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "İletişim";
+}
+<div class="py-5" style="background: linear-gradient(135deg, #232526 0%, #414345 100%); min-height: 100vh;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card p-5 shadow-lg border-0 bg-dark text-light">
+                    <div class="text-center mb-5">
+                        <span style="display:inline-block; background: linear-gradient(90deg, #0d6efd 0%, #800020 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                            <svg width="70" height="70" fill="none" viewBox="0 0 24 24" stroke="#0d6efd"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10.5V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2v-4.5M16 3.5V7m0 0l-4 4m4-4l4 4"/></svg>
+                        </span>
+                        <h1 class="fw-bold display-5 mt-3 mb-2" style="background: linear-gradient(90deg, #0d6efd 0%, #800020 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Bize Ulaşın</h1>
+                        <p class="lead text-secondary mb-0">Her türlü soru, öneri ve talepleriniz için bize ulaşabilirsiniz.</p>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="ad" class="form-label">Adınız</label>
+                            <input type="text" class="form-control" id="ad" name="ad" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-posta</label>
+                            <input type="email" class="form-control" id="email" name="email" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="mesaj" class="form-label">Mesajınız</label>
+                            <textarea class="form-control" id="mesaj" name="mesaj" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2 fs-5">Gönder</button>
+                    </form>
+                    <div class="mt-5 text-center">
+                        <h5>İletişim Bilgileri</h5>
+                        <p class="mb-1"><strong>Adres:</strong> İstanbul, Türkiye</p>
+                        <p class="mb-1"><strong>Telefon:</strong> +90 555 123 45 67</p>
+                        <p class="mb-1"><strong>E-posta:</strong> info@carsammotors.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

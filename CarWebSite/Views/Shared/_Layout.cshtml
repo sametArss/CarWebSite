@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CarWebSite</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CarWebSite.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        .navbar {
+            min-height: 72px;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        .navbar-brand span {
+            font-size: 2.2rem !important;
+            font-weight: 700 !important;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.15rem;
+            font-weight: 600;
+            font-family: 'Poppins', Arial, sans-serif;
+            letter-spacing: 0.5px;
+            padding-left: 1.2rem !important;
+            padding-right: 1.2rem !important;
+        }
+        .navbar .navbar-brand svg {
+            width: 48px !important;
+            height: 48px !important;
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: #800020 !important;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center gap-2" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span style="display: flex; align-items: center;">
+                        <svg width="48" height="48" viewBox="0 0 64 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="18" width="52" height="10" rx="5" fill="#0d6efd"/>
+                            <rect x="14" y="10" width="36" height="10" rx="4" fill="#6c757d"/>
+                            <ellipse cx="16" cy="30" rx="6" ry="6" fill="#212529" stroke="#fff" stroke-width="2"/>
+                            <ellipse cx="48" cy="30" rx="6" ry="6" fill="#212529" stroke="#fff" stroke-width="2"/>
+                            <rect x="24" y="14" width="16" height="6" rx="2" fill="#fff" fill-opacity="0.7"/>
+                            <rect x="10" y="22" width="8" height="4" rx="2" fill="#ffc107"/>
+                            <rect x="46" y="22" width="8" height="4" rx="2" fill="#ffc107"/>
+                        </svg>
+                    </span>
+                    <span class="fw-bold fs-3" style="letter-spacing:1px;">CarSam Motors</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="List">Araba Listesi</a>
+                        </li>
+                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Add">Araba Ekle</a>
+                        </li>
+                        -->
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Contact">İletişim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="hizmetlerimizDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Hizmetlerimiz
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="hizmetlerimizDropdown">
+                                <li><a class="dropdown-item" href="#">Satış</a></li>
+                                <li><a class="dropdown-item" href="#">Takas</a></li>
+                                <li><a class="dropdown-item" href="#">Kredi</a></li>
+                                <li><a class="dropdown-item" href="#">Sigorta</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            &copy; 2025 - CarWebSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,133 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
+  text-align: start;
+}
+
+body.bg-dark {
+  background: #181a1b !important;
+  color: #f8f9fa !important;
+}
+
+.navbar-dark.bg-dark {
+  background: #23272b !important;
+  border-bottom: 1px solid #343a40 !important;
+}
+
+.card,
+.table,
+.form-control,
+.btn,
+.navbar,
+.modal-content {
+  background-color: #23272b !important;
+  color: #f8f9fa !important;
+  border-color: #343a40 !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: #202225 !important;
+}
+
+.btn-primary {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+.btn-success {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+}
+
+.btn-warning {
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+  color: #23272b !important;
+}
+
+.btn-danger {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+input.form-control,
+textarea.form-control {
+  background-color: #181a1b !important;
+  color: #f8f9fa !important;
+  border: 1px solid #343a40 !important;
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+  background-color: #23272b !important;
+  color: #fff !important;
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, .25);
+}
+
+footer.footer {
+  background: #23272b !important;
+  color: #adb5bd !important;
+  border-top: 1px solid #343a40 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff !important;
+}
+
+a,
+.nav-link,
+.navbar-brand {
+  color: #f8f9fa !important;
+}
+
+a:hover,
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #0d6efd !important;
+}
+
+.btn-outline-primary.w-100:hover,
+.btn-outline-primary.w-100:focus {
+  background-color: #800020 !important;
+  color: #fff !important;
+  border-color: #800020 !important;
+  transition: background 0.2s, color 0.2s;
+}

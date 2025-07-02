@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Araba Ekle";
+}
+<div class="card p-4 shadow-lg bg-dark border-0 mt-5" style="max-width: 600px; margin: 0 auto;">
+    <h2 class="mb-4 text-center">Araba Ekle</h2>
+    <form>
+        <div class="mb-3">
+            <label for="marka" class="form-label">Marka</label>
+            <input type="text" class="form-control" id="marka" name="marka" required />
+        </div>
+        <div class="mb-3">
+            <label for="model" class="form-label">Model</label>
+            <input type="text" class="form-control" id="model" name="model" required />
+        </div>
+        <div class="mb-3">
+            <label for="yil" class="form-label">Yıl</label>
+            <input type="number" class="form-control" id="yil" name="yil" required />
+        </div>
+        <div class="mb-3">
+            <label for="fiyat" class="form-label">Fiyat</label>
+            <input type="text" class="form-control" id="fiyat" name="fiyat" required />
+        </div>
+        <button type="submit" class="btn btn-success w-100">Kaydet</button>
+    </form>
+</div> 

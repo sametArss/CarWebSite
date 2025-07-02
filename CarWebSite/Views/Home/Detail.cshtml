@@ -1,0 +1,117 @@
+@{
+    ViewData["Title"] = "Araba Detayı";
+    var images = new[] {
+        "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80"
+    };
+}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-lg border-0 bg-dark text-light p-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-6">
+                        <div id="carDetailCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                            <div class="carousel-inner rounded-3">
+                                @for (int i = 0; i < images.Length; i++) {
+                                    <div class="carousel-item @(i == 0 ? "active" : "")">
+                                        <img src="@images[i]" class="d-block w-100 car-img-thumb" alt="BMW 320i" style="max-height:400px;object-fit:cover;cursor:pointer;" data-index="@i">
+                                    </div>
+                                }
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carDetailCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Önceki</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carDetailCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Sonraki</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="fw-bold mb-2 display-4" style="color:#0d6efd;">BMW 320i</h2>
+                        <h5 class="mb-3 text-secondary fs-4">2020 Model</h5>
+                        <h4 class="fw-bold mb-3 fs-2">1.200.000 TL</h4>
+                        <p class="mb-4 fs-5">BMW 320i, modern tasarımı ve yüksek performansı ile öne çıkan bir sedan modelidir. Konfor, güvenlik ve sürüş keyfini bir arada sunar.</p>
+                        <div class="row text-center mb-4">
+                            <div class="col-4">
+                                <div class="p-3 bg-secondary bg-opacity-10 rounded">
+                                    <span class="fw-bold fs-5">Otomatik</span><br>
+                                    <small>Vites</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-3 bg-secondary bg-opacity-10 rounded">
+                                    <span class="fw-bold fs-5">Benzin</span><br>
+                                    <small>Yakıt</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-3 bg-secondary bg-opacity-10 rounded">
+                                    <span class="fw-bold fs-5">30.000 km</span><br>
+                                    <small>Kilometre</small>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/Home/List" class="btn btn-outline-primary btn-lg px-4 py-2">&larr; Geri Dön</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Image Lightbox -->
+<div class="modal fade" id="carImageModal" tabindex="-1" aria-labelledby="carImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark text-light border-0">
+            <div class="modal-body p-0 position-relative">
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                <div id="modalCarousel" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        @for (int i = 0; i < images.Length; i++) {
+                            <div class="carousel-item @(i == 0 ? "active" : "")">
+                                <img src="@images[i]" class="d-block w-100" style="max-height:80vh;object-fit:contain;">
+                            </div>
+                        }
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Önceki</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sonraki</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+<script>
+    // Carousel'daki fotoğrafa tıklayınca modal aç
+    document.querySelectorAll('.car-img-thumb').forEach(function(img) {
+        img.addEventListener('click', function() {
+            var idx = parseInt(img.getAttribute('data-index'));
+            var modalEl = document.getElementById('carImageModal');
+            var modal = new bootstrap.Modal(modalEl);
+            // Aktif slide'ı ayarla
+            var modalCarousel = document.getElementById('modalCarousel');
+            var items = modalCarousel.querySelectorAll('.carousel-item');
+            items.forEach(function(item, i) {
+                item.classList.remove('active');
+                if(i === idx) item.classList.add('active');
+            });
+            modal.show();
+        });
+    });
+    // Modal çarpı butonuna tıklanınca modalı tamamen kapat
+    document.querySelector('#carImageModal .btn-close').addEventListener('click', function() {
+        var modalEl = document.getElementById('carImageModal');
+        var modal = bootstrap.Modal.getInstance(modalEl);
+        if(modal) modal.hide();
+    });
+</script>
+} 

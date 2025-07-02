@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card p-4 shadow-lg bg-dark border-0">
+                <div id="carCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-3">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Araba 1" style="max-height:440px;object-fit:cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Araba 2" style="max-height:440px;object-fit:cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Araba 3" style="max-height:440px;object-fit:cover;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Önceki</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sonraki</span>
+                    </button>
+                </div>
+                <h2 class="fw-bold text-center">Hayalinizdeki arabayı bulun!</h2>
+                <p class="lead mt-2 mb-0 text-center">Modern ve kolay kullanımlı galeri yönetim sistemi ile CarSam Motors'ta aradığınız aracı kolayca bulabilir, ekleyebilir ve yönetebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Hizmetlerimiz Bölümü -->
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-10">
+            <h2 class="fw-bold text-center mb-4">Hizmetlerimiz</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card h-100 text-center p-4 border-0 shadow-sm" style="background: linear-gradient(135deg, #0d6efd 0%, #6c63ff 100%); color: #fff;">
+                        <div class="mb-3">
+                            <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 16.5V19a2 2 0 002 2h14a2 2 0 002-2v-2.5M16 3.5V7m0 0l-4 4m4-4l4 4"/></svg>
+                        </div>
+                        <h5 class="fw-bold mb-2">Satış</h5>
+                        <p>Geniş araç portföyümüzle hayalinizdeki arabayı kolayca satın alın.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 text-center p-4 border-0 shadow-sm" style="background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%); color: #23272b;">
+                        <div class="mb-3">
+                            <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+                        </div>
+                        <h5 class="fw-bold mb-2">Takas</h5>
+                        <p>Mevcut aracınızı değerinde takas ederek yeni aracınıza sahip olun.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 text-center p-4 border-0 shadow-sm" style="background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); color: #fff;">
+                        <div class="mb-3">
+                            <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 4v4m0 0c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2 2z"/></svg>
+                        </div>
+                        <h5 class="fw-bold mb-2">Kredi</h5>
+                        <p>Avantajlı kredi seçenekleriyle araç sahibi olmayı kolaylaştırıyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 text-center p-4 border-0 shadow-sm" style="background: linear-gradient(135deg, #ff5858 0%, #f09819 100%); color: #fff;">
+                        <div class="mb-3">
+                            <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h5 class="fw-bold mb-2">Sigorta</h5>
+                        <p>Aracınız için en uygun sigorta çözümlerini sunuyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Harita ve Konum Bölümü -->
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-10">
+            <div class="card p-4 shadow-lg border-0 bg-dark text-light" style="background: linear-gradient(135deg, #232526 0%, #414345 100%);">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h3 class="fw-bold mb-3">Bizi Ziyaret Edin</h3>
+                        <p class="mb-2"><strong>Adres:</strong> İstanbul, Türkiye</p>
+                        <p class="mb-2"><strong>Telefon:</strong> +90 555 123 45 67</p>
+                        <p class="mb-2"><strong>E-posta:</strong> info@carsammotors.com</p>
+                        <a href="/Home/Contact" class="btn btn-outline-primary mt-3">İletişim Formu</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow">
+                            <iframe src="https://www.google.com/maps?q=İstanbul&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
