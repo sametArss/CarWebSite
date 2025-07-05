@@ -1,0 +1,12 @@
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\bin\Debug\net9.0\BusiniessLayer.deps.json
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\bin\Debug\net9.0\BusiniessLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\bin\Debug\net9.0\BusiniessLayer.pdb
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer.AssemblyInfoInputs.cache
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer.AssemblyInfo.cs
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer.sourcelink.json
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\refint\BusiniessLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer.pdb
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\ref\BusiniessLayer.dll

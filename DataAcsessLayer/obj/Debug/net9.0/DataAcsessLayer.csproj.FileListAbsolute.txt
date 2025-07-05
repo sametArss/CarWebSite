@@ -1,0 +1,16 @@
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\bin\Debug\net9.0\DataAcsessLayer.deps.json
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\bin\Debug\net9.0\DataAcsessLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\bin\Debug\net9.0\DataAcsessLayer.pdb
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\bin\Debug\net9.0\EntityLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\bin\Debug\net9.0\EntityLayer.pdb
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\DataAcsessLayer.csproj.AssemblyReference.cache
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\DataAcsessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\DataAcsessLayer.AssemblyInfoInputs.cache
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\DataAcsessLayer.AssemblyInfo.cs
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\DataAcsessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\DataAcsessLayer.sourcelink.json
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\DataAcse.F1C317C3.Up2Date
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\DataAcsessLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\refint\DataAcsessLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\DataAcsessLayer.pdb
+C:\Users\Samet\Desktop\CarWebSite\DataAcsessLayer\obj\Debug\net9.0\ref\DataAcsessLayer.dll
