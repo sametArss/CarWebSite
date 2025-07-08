@@ -16,6 +16,7 @@ namespace EntityLayer.Models
         public virtual Models Models { get; set; }
 
         public int KiloMetre { get; set; }
+
         public int Year { get; set; }
         public decimal Price { get; set; }
         public bool CarStatus { get; set; }

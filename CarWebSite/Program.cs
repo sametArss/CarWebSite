@@ -1,23 +1,32 @@
-using Microsoft.AspNetCore.Builder;
+ï»¿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 
-using DataAcsessLayer.Concrete.Context; 
-
+using DataAcsessLayer.Concrete.Context;
+using DataAcsessLayer.Abstract;
+using DataAcsessLayer.EntityFramework;
+using BusiniessLayer.Abstract;
+using BusiniessLayer.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// PostgreSQL baðlantýsýný burada tanýmlýyoruz
+// âœ… PostgreSQL baÄŸlantÄ±sÄ±
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Controller ve View servisini ekliyoruz
+// âœ… Repository (Data Access Layer) kayÄ±tlarÄ±
+builder.Services.AddScoped<ICarsDal, EFCarsDal>();
+
+// âœ… Service (Business Layer) kayÄ±tlarÄ±
+builder.Services.AddScoped<ICarsService, CarsManager>();
+
+// âœ… MVC Controller ve View servisi
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Hatalarý ve güvenliði ayarlýyoruz
+// âœ… Hata ve gÃ¼venlik ayarlarÄ±
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -31,7 +40,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-// Default route
+// âœ… VarsayÄ±lan route ayarÄ±
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

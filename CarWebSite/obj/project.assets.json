@@ -918,6 +918,20 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "BusiniessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DataAcsessLayer": "1.0.0",
+          "EntityLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusiniessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusiniessLayer.dll": {}
+        }
+      },
       "DataAcsessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -2831,6 +2845,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "BusiniessLayer/1.0.0": {
+      "type": "project",
+      "path": "../BusiniessLayer/BusiniessLayer.csproj",
+      "msbuildProject": "../BusiniessLayer/BusiniessLayer.csproj"
+    },
     "DataAcsessLayer/1.0.0": {
       "type": "project",
       "path": "../DataAcsessLayer/DataAcsessLayer.csproj",
@@ -2844,7 +2863,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "DataAcsessLayer >= 1.0.0",
+      "BusiniessLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.6",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.6",
@@ -2884,8 +2903,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Samet\\Desktop\\CarWebSite\\DataAcsessLayer\\DataAcsessLayer.csproj": {
-              "projectPath": "C:\\Users\\Samet\\Desktop\\CarWebSite\\DataAcsessLayer\\DataAcsessLayer.csproj"
+            "C:\\Users\\Samet\\Desktop\\CarWebSite\\BusiniessLayer\\BusiniessLayer.csproj": {
+              "projectPath": "C:\\Users\\Samet\\Desktop\\CarWebSite\\BusiniessLayer\\BusiniessLayer.csproj"
             }
           }
         }

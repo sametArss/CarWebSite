@@ -10,3 +10,9 @@ C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer
 C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\refint\BusiniessLayer.dll
 C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer.pdb
 C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\ref\BusiniessLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\bin\Debug\net9.0\DataAcsessLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\bin\Debug\net9.0\EntityLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\bin\Debug\net9.0\DataAcsessLayer.pdb
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\bin\Debug\net9.0\EntityLayer.pdb
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\BusiniessLayer.csproj.AssemblyReference.cache
+C:\Users\Samet\Desktop\CarWebSite\BusiniessLayer\obj\Debug\net9.0\Businies.C1C86F49.Up2Date

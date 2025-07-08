@@ -201,3 +201,5 @@ C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\EntityLayer.pdb
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.csproj.AssemblyReference.cache
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.sourcelink.json
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.csproj.Up2Date
+C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\BusiniessLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\BusiniessLayer.pdb
