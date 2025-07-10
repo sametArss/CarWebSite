@@ -11,7 +11,7 @@ namespace EntityLayer.Models
     {
         [Key]
         public int BrandId { get; set; }
-        public string BrandName { get; set; }
+        public required string BrandName { get; set; }
         public bool BrandStatus { get; set; }
         public ICollection<Cars> Cars { get; set; }
     }

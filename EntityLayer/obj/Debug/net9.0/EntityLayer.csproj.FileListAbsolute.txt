@@ -10,3 +10,4 @@ C:\Users\Samet\Desktop\CarWebSite\EntityLayer\obj\Debug\net9.0\EntityLayer.dll
 C:\Users\Samet\Desktop\CarWebSite\EntityLayer\obj\Debug\net9.0\refint\EntityLayer.dll
 C:\Users\Samet\Desktop\CarWebSite\EntityLayer\obj\Debug\net9.0\EntityLayer.pdb
 C:\Users\Samet\Desktop\CarWebSite\EntityLayer\obj\Debug\net9.0\ref\EntityLayer.dll
+C:\Users\Samet\Desktop\CarWebSite\EntityLayer\obj\Debug\net9.0\EntityLayer.csproj.AssemblyReference.cache

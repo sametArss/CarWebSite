@@ -89,7 +89,6 @@ C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\staticwebassets\ms
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.CarWebSite.props
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.CarWebSite.props
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.dll
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\refint\CarWebSite.dll
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.pdb
@@ -203,3 +202,5 @@ C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.sourcel
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.csproj.Up2Date
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\BusiniessLayer.dll
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\BusiniessLayer.pdb
+C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.MvcApplicationPartsAssemblyInfo.cs

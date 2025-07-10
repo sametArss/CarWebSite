@@ -22,7 +22,7 @@ namespace DataAcsessLayer.Concrete.Context
         public DbSet<Models> Models { get; set; }
         public DbSet<PieceStatus> PieceStatuses { get; set; }
         public DbSet<Expertise> Expertises { get; set; }
-
+        public DbSet<CarImage> CarImages { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -117,6 +117,13 @@ namespace DataAcsessLayer.Concrete.Context
                 .WithMany()
                 .HasForeignKey(e => e.SagArkaCamurlukStatusId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // Cars - CarImage ilişkisi (1-Çok)
+            modelBuilder.Entity<CarImage>()
+                .HasOne(ci => ci.Car)
+                .WithMany(c => c.CarImages)
+                .HasForeignKey(ci => ci.CarId)
+                .OnDelete(DeleteBehavior.Cascade); // Bir araç silindiğinde, ona ait tüm fotoğraflar da silinsin
 
            
         }

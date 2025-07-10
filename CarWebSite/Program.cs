@@ -17,9 +17,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // ✅ Repository (Data Access Layer) kayıtları
 builder.Services.AddScoped<ICarsDal, EFCarsDal>();
+builder.Services.AddScoped<IBrandDal, EFBrandDal>();
+builder.Services.AddScoped<IModelsDal, EFModelsDal>();
+builder.Services.AddScoped<ICarImageDal, EFCarImageDal>();
 
 // ✅ Service (Business Layer) kayıtları
 builder.Services.AddScoped<ICarsService, CarsManager>();
+builder.Services.AddScoped<IBrandService, BrandManager>();
+builder.Services.AddScoped<IModelsService, ModelsManager>();
+builder.Services.AddScoped<ICarImageService, CarImageManager>();
 
 // ✅ MVC Controller ve View servisi
 builder.Services.AddControllersWithViews();

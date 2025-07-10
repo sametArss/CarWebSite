@@ -11,12 +11,12 @@
             {
                 <div class="col-md-3">
                     <div class="card h-100 shadow-lg border-0 bg-dark text-light">
-                        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="@car.Brand.BrandName @car.Models.ModelName" style="height:220px;object-fit:cover;">
+                        <img src="@(car.CarImages != null && car.CarImages.Any() ? car.CarImages.First().ImagePath : "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=600&q=80")" class="card-img-top" alt="@car.Brand.BrandName @car.Models.ModelName" style="height:220px;object-fit:cover;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">@car.Brand.BrandName @car.Models.ModelName</h5>
                             <p class="card-text mb-1">Yıl: @car.Year</p>
                             <p class="card-text mb-2">Fiyat: @car.Price TL</p>
-                            <a href="/Home/Detail/@car.CarId" class="btn btn-outline-primary w-100">İncele</a>
+                            <a href="@Url.Action("Detail", "Cars", new { id = car.CarId })" class="btn btn-outline-primary w-100">İncele</a>
                         </div>
                     </div>
                 </div>

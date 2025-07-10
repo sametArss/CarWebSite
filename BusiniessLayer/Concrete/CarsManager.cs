@@ -20,9 +20,15 @@ namespace BusiniessLayer.Concrete
 
         public List<Cars> GetAllCars()
         {
-            return _carsDal.GetAllFilterInclude(x=>x.CarStatus==true,
-            x=>x.Models,
-            x=>x.Brand);
+            return _carsDal.GetAllFilterInclude(x => x.CarStatus == true,
+                x => x.Models,
+                x => x.Brand,
+                x => x.CarImages);
+        }
+
+        public void AddCar(Cars car)
+        {
+            _carsDal.Insert(car);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace DataAcsessLayer.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.6")
+                .HasAnnotation("ProductVersion", "9.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -40,6 +40,31 @@ namespace DataAcsessLayer.Migrations
                     b.HasKey("BrandId");
 
                     b.ToTable("Brands");
+                });
+
+            modelBuilder.Entity("EntityLayer.Models.CarImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UploadedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.ToTable("CarImages");
                 });
 
             modelBuilder.Entity("EntityLayer.Models.Cars", b =>
@@ -201,6 +226,17 @@ namespace DataAcsessLayer.Migrations
                     b.ToTable("PieceStatuses");
                 });
 
+            modelBuilder.Entity("EntityLayer.Models.CarImage", b =>
+                {
+                    b.HasOne("EntityLayer.Models.Cars", "Car")
+                        .WithMany("CarImages")
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+                });
+
             modelBuilder.Entity("EntityLayer.Models.Cars", b =>
                 {
                     b.HasOne("EntityLayer.Models.Brand", "Brand")
@@ -326,8 +362,7 @@ namespace DataAcsessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Models.Cars", b =>
                 {
-                    b.Navigation("Expertise")
-                        .IsRequired();
+                    b.Navigation("CarImages");
                 });
 
             modelBuilder.Entity("EntityLayer.Models.Models", b =>

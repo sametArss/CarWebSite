@@ -11,7 +11,7 @@ namespace EntityLayer.Models
     {
         [Key]
         public int ModelId { get; set; }
-        public string ModelName { get; set; }
+        public required string ModelName { get; set; }
         public int  BrandId { get; set; }
         public bool ModelStatus { get; set; }
 

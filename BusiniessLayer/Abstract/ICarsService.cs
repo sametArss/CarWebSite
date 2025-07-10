@@ -10,5 +10,6 @@ namespace BusiniessLayer.Abstract
     public interface ICarsService
     {
         List<Cars> GetAllCars();
+        void AddCar(Cars car);
     }
 }
