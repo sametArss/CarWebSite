@@ -204,3 +204,4 @@ C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\BusiniessLayer.dll
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\BusiniessLayer.pdb
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\Newtonsoft.Json.dll
