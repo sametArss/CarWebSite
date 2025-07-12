@@ -3,19 +3,19 @@
     ViewData["Title"] = "Ekspertiz Ekle";
     var pieceStatuses = ViewBag.PieceStatuses as List<EntityLayer.Models.PieceStatus>;
     int carId = ViewBag.CarId;
-    // Expertise modelindeki property adları ve Türkçe karşılıkları
+    // Görseldeki numaraya göre property adları ve Türkçe karşılıkları
     var pieceFields = new[] {
-        new { Name = "KaputStatusId", Label = "Kaput" },
-        new { Name = "TavanStatusId", Label = "Tavan" },
-        new { Name = "BagajStatusId", Label = "Bagaj" },
-        new { Name = "SolOnKapıStatusId", Label = "Sol Ön Kapı" },
-        new { Name = "SagOnKapıStatusId", Label = "Sağ Ön Kapı" },
-        new { Name = "SolArkaKapıStatusId", Label = "Sol Arka Kapı" },
-        new { Name = "SagArkaKapıStatusId", Label = "Sağ Arka Kapı" },
-        new { Name = "SolOnCamurlukStatusId", Label = "Sol Ön Çamurluk" },
-        new { Name = "SagOnCamurlukStatusId", Label = "Sağ Ön Çamurluk" },
-        new { Name = "SolArkaCamurlukStatusId", Label = "Sol Arka Çamurluk" },
-        new { Name = "SagArkaCamurlukStatusId", Label = "Sağ Arka Çamurluk" }
+        new { Name = "SolOnCamurlukStatusId", Label = "Sol Ön Çamurluk" },   // 1
+        new { Name = "SolOnKapıStatusId", Label = "Sol Ön Kapı" },           // 2
+        new { Name = "SolArkaKapıStatusId", Label = "Sol Arka Kapı" },      // 3
+        new { Name = "SolArkaCamurlukStatusId", Label = "Sol Arka Çamurluk" }, // 4
+        new { Name = "BagajStatusId", Label = "Bagaj" },                     // 6
+        new { Name = "SagArkaCamurlukStatusId", Label = "Sağ Arka Çamurluk" }, // 7
+        new { Name = "SagArkaKapıStatusId", Label = "Sağ Arka Kapı" },      // 8
+        new { Name = "SagOnKapıStatusId", Label = "Sağ Ön Kapı" },          // 9
+        new { Name = "SagOnCamurlukStatusId", Label = "Sağ Ön Çamurluk" },  // 10
+        new { Name = "KaputStatusId", Label = "Kaput" },                    // 12
+        new { Name = "TavanStatusId", Label = "Tavan" }                     // 13
     };
 }
 
@@ -90,18 +90,16 @@
     <span class="car-map-label" style="top:140px; left:440px;">11</span>
     <span class="car-map-label" style="top:140px; left:340px;">12</span>
     <span class="car-map-label" style="top:140px; left:210px;">13</span>
-    <!-- Butonlar şeffaf, tıklanabilir alan olarak -->
+    <!-- Butonlar: 5 ve 11 tamamen kaldırıldı, kalanlar sıralı ve onclick değerleri: 1,2,3,4,6,7,8,9,10,12,13 -->
     <button type="button" class="car-map-btn" style="top:50px; left:360px;" onclick="showDropdown(1, event)"></button>
     <button type="button" class="car-map-btn" style="top:50px; left:250px;" onclick="showDropdown(2, event)"></button>
     <button type="button" class="car-map-btn" style="top:50px; left:180px;" onclick="showDropdown(3, event)"></button>
     <button type="button" class="car-map-btn" style="top:35px; left:60px;" onclick="showDropdown(4, event)"></button>
-    <button type="button" class="car-map-btn" style="top:140px; left:10px;" onclick="showDropdown(5, event)"></button>
     <button type="button" class="car-map-btn" style="top:140px; left:80px;" onclick="showDropdown(6, event)"></button>
     <button type="button" class="car-map-btn" style="top:240px; left:60px;" onclick="showDropdown(7, event)"></button>
     <button type="button" class="car-map-btn" style="top:240px; left:180px;" onclick="showDropdown(8, event)"></button>
     <button type="button" class="car-map-btn" style="top:240px; left:240px;" onclick="showDropdown(9, event)"></button>
     <button type="button" class="car-map-btn" style="top:240px; left:360px;" onclick="showDropdown(10, event)"></button>
-    <button type="button" class="car-map-btn" style="top:140px; left:440px;" onclick="showDropdown(11, event)"></button>
     <button type="button" class="car-map-btn" style="top:140px; left:340px;" onclick="showDropdown(12, event)"></button>
     <button type="button" class="car-map-btn" style="top:140px; left:210px;" onclick="showDropdown(13, event)"></button>
     <div id="piece-dropdown" class="piece-dropdown"></div>
@@ -123,7 +121,11 @@
     function showDropdown(pieceNo, event) {
         const dropdown = document.getElementById('piece-dropdown');
         dropdown.innerHTML = '';
-        let html = `<strong>${pieceFields[pieceNo-1].Label}</strong><br/><select id='dropdown-select' class='form-control mt-1'>`;
+        // pieceNo değerleri: 1,2,3,4,6,7,8,9,10,12,13
+        // pieceFields indexi: 0,1,2,3,4,5,6,7,8,9,10
+        let fieldIndex = [1,2,3,4,6,7,8,9,10,12,13].indexOf(pieceNo);
+        if (fieldIndex === -1) return;
+        let html = `<strong style='color:#111;'>${pieceFields[fieldIndex].Label}</strong><br/><select id='dropdown-select' class='form-control mt-1'>`;
         html += `<option value=''>Durum Seçiniz</option>`;
         for (let status of pieceStatuses) {
             html += `<option value='${status.PieceId}'>${status.PieceStatusName}</option>`;
@@ -140,15 +142,18 @@
         const dropdown = document.getElementById('piece-dropdown');
         const select = document.getElementById('dropdown-select');
         const value = select.value;
+        let fieldIndex = [1,2,3,4,6,7,8,9,10,12,13].indexOf(pieceNo);
+        if (fieldIndex === -1) return;
         if (value) {
             selectedPieces[pieceNo] = value;
-            document.getElementById(pieceFields[pieceNo-1].Name).value = value;
-            document.querySelectorAll('.car-map-btn')[pieceNo-1].classList.add('selected');
+            document.getElementById(pieceFields[fieldIndex].Name).value = value;
+            document.querySelectorAll('.car-map-btn')[fieldIndex].classList.add('selected');
         }
         dropdown.style.display = 'none';
     }
 
     document.getElementById('expertiseForm').onsubmit = function() {
+        // 5 ve 11 hariç tüm alanlar dolu mu kontrol et
         for (let i = 0; i < pieceFields.length; i++) {
             if (!document.getElementById(pieceFields[i].Name).value) {
                 alert('Lütfen tüm parçalar için durum seçiniz!');

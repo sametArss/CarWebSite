@@ -117,6 +117,12 @@ namespace DataAcsessLayer.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ExpertiseId"));
 
+                    b.Property<int>("ArkaTampon")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ArkaTamponStatusPieceId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("BagajStatusId")
                         .HasColumnType("integer");
 
@@ -127,6 +133,12 @@ namespace DataAcsessLayer.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("KaputStatusId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("OnTamponDurum")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("OnTamponStatusPieceId")
                         .HasColumnType("integer");
 
                     b.Property<int>("SagArkaCamurlukStatusId")
@@ -158,12 +170,16 @@ namespace DataAcsessLayer.Migrations
 
                     b.HasKey("ExpertiseId");
 
+                    b.HasIndex("ArkaTamponStatusPieceId");
+
                     b.HasIndex("BagajStatusId");
 
                     b.HasIndex("CarId")
                         .IsUnique();
 
                     b.HasIndex("KaputStatusId");
+
+                    b.HasIndex("OnTamponStatusPieceId");
 
                     b.HasIndex("SagArkaCamurlukStatusId");
 
@@ -258,6 +274,12 @@ namespace DataAcsessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Models.Expertise", b =>
                 {
+                    b.HasOne("EntityLayer.Models.PieceStatus", "ArkaTamponStatus")
+                        .WithMany()
+                        .HasForeignKey("ArkaTamponStatusPieceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("EntityLayer.Models.PieceStatus", "BagajStatus")
                         .WithMany()
                         .HasForeignKey("BagajStatusId")
@@ -274,6 +296,12 @@ namespace DataAcsessLayer.Migrations
                         .WithMany()
                         .HasForeignKey("KaputStatusId")
                         .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Models.PieceStatus", "OnTamponStatus")
+                        .WithMany()
+                        .HasForeignKey("OnTamponStatusPieceId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EntityLayer.Models.PieceStatus", "SagArkaCamurlukStatus")
@@ -330,11 +358,15 @@ namespace DataAcsessLayer.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.Navigation("ArkaTamponStatus");
+
                     b.Navigation("BagajStatus");
 
                     b.Navigation("Car");
 
                     b.Navigation("KaputStatus");
+
+                    b.Navigation("OnTamponStatus");
 
                     b.Navigation("SagArkaCamurlukStatus");
 
