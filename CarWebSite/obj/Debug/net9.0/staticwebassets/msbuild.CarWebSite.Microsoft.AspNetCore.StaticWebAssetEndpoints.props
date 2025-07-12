@@ -252,6 +252,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-EJvThHpBs5O3FUNrxfIYTaP\u002BMRHS7T5dvU5eqExiczI="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"9441"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022EJvThHpBs5O3FUNrxfIYTaP\u002BMRHS7T5dvU5eqExiczI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 11 Jul 2025 07:40:29 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CarWebSite/images/araba_siluet.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\araba_siluet.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-J0d1HAJgCOFB2uu9iLlz1wjC3wNcK2Hv9t\u002BvaaMFi2w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"118045"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022J0d1HAJgCOFB2uu9iLlz1wjC3wNcK2Hv9t\u002BvaaMFi2w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 12 Jul 2025 15:58:47 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CarWebSite/images/araba_siluet.rr8r2crpce.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\araba_siluet.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rr8r2crpce"},{"Name":"integrity","Value":"sha256-J0d1HAJgCOFB2uu9iLlz1wjC3wNcK2Hv9t\u002BvaaMFi2w="},{"Name":"label","Value":"_content/CarWebSite/images/araba_siluet.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"118045"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022J0d1HAJgCOFB2uu9iLlz1wjC3wNcK2Hv9t\u002BvaaMFi2w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 12 Jul 2025 15:58:47 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CarWebSite/images/c3986ef1-0fea-4cdc-b9b3-66a425c0d8cd.89g8gt23q4.jpeg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\c3986ef1-0fea-4cdc-b9b3-66a425c0d8cd.jpeg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

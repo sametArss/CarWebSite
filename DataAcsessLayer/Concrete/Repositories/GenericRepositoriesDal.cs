@@ -35,9 +35,16 @@ namespace DataAcsessLayer.Concrete.Repositories
             return _context.Set<T>().Where(filter).ToList();
         }
 
-        public T GetByFilter(Expression<Func<T, bool>> filter)
+        public T GetByFilter(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] includes)
         {
-            return _context.Set<T>().FirstOrDefault(filter);
+            IQueryable<T> query = _context.Set<T>();
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return query.FirstOrDefault(filter);
         }
 
         public T GetById(int id)

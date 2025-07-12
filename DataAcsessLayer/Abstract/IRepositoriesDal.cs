@@ -15,7 +15,8 @@ namespace DataAcsessLayer.Abstract
         T GetById(int id);
         List<T> GetAll();
         List<T> GetAllFilter(Expression<Func<T, bool>> filter);
-        T GetByFilter(Expression<Func<T, bool>> filter);
+        T GetByFilter(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] includes);
+
         List<T> GetAllFilterInclude(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] includes);
 
 

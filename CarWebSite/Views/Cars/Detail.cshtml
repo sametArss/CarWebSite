@@ -55,6 +55,12 @@
                             </div>
                         </div>
                         <a href="@Url.Action("Index", "Cars")" class="btn btn-outline-primary btn-lg px-4 py-2">&larr; Geri Dön</a>
+                        @if (ViewBag.Expertise != null)
+                        {
+                            <button type="button" class="btn btn-info btn-lg px-4 py-2 ms-2" data-bs-toggle="modal" data-bs-target="#expertiseModal">
+                                Ekspertiz
+                            </button>
+                        }
                     </div>
                 </div>
             </div>
@@ -88,6 +94,66 @@
         </div>
     </div>
 </div>
+@if (ViewBag.Expertise != null)
+{
+    var expertise = ViewBag.Expertise;
+    var parts = new[] {
+        new { Name = "Kaput", StatusName = expertise.KaputStatus?.PieceStatusName, Left = 340, Top = 150 },
+        new { Name = "Tavan", StatusName = expertise.TavanStatus?.PieceStatusName, Left = 190, Top = 150 },
+        new { Name = "Bagaj", StatusName = expertise.BagajStatus?.PieceStatusName, Left = 80, Top = 150 },
+        new { Name = "Sol Ön Kapı", StatusName = expertise.SolOnKapıStatus?.PieceStatusName, Left = 250, Top = 50 },
+        new { Name = "Sağ Ön Kapı", StatusName = expertise.SagOnKapıStatus?.PieceStatusName, Left = 250, Top = 250 },
+        new { Name = "Sol Arka Kapı", StatusName = expertise.SolArkaKapıStatus?.PieceStatusName, Left = 180, Top = 50 },
+        new { Name = "Sağ Arka Kapı", StatusName = expertise.SagArkaKapıStatus?.PieceStatusName, Left = 180, Top = 250 },
+        new { Name = "Sol Ön Çamurluk", StatusName = expertise.SolOnCamurlukStatus?.PieceStatusName, Left = 340, Top = 50 },
+        new { Name = "Sağ Ön Çamurluk", StatusName = expertise.SagOnCamurlukStatus?.PieceStatusName, Left = 340, Top = 250 },
+        new { Name = "Sol Arka Çamurluk", StatusName = expertise.SolArkaCamurlukStatus?.PieceStatusName, Left = 90, Top = 50 },
+        new { Name = "Sağ Arka Çamurluk", StatusName = expertise.SagArkaCamurlukStatus?.PieceStatusName, Left = 90, Top = 250 },
+    };
+    Func<string, string> getColor = statusName =>
+    {
+        if (string.IsNullOrEmpty(statusName)) return "rgba(128,128,128,0.4)";
+        statusName = statusName.ToLower();
+        if (statusName.Contains("sağlam") || statusName.Contains("orjinal")) return "rgba(0,255,0,0.6)";
+        if (statusName.Contains("lokal boyalı")) return "rgba(255,140,0,0.8)"; // Turuncu
+        if (statusName.Contains("boyalı")) return "rgba(0,123,255,0.8)"; // Mavi
+        if (statusName.Contains("değişen") || statusName.Contains("değişmiş")) return "rgba(255,0,0,0.6)";
+        return "rgba(128,128,128,0.4)";
+    };
+    <div class="modal fade" id="expertiseModal" tabindex="-1" aria-labelledby="expertiseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="expertiseModalLabel">Ekspertiz Raporu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+                  
+                    <div style="position: relative; width: 500px; margin: auto;">
+                        <img src="/images/araba_siluet.png" style="width: 100%;" />
+                       
+                        @for (int i = 0; i < parts.Length; i++)
+                        {
+                            var part = parts[i];
+                            <div style="position: absolute; left:@($"{part.Left}px"); top:@($"{part.Top}px"); width:40px; height:40px; background-color:@getColor(part.StatusName); border-radius:50%; z-index:10; display:flex; align-items:center; justify-content:center; font-weight:bold; color:#fff; border:2px solid #000; box-shadow:0 0 4px #000; cursor:pointer; font-size:10px;"
+                                 title="@part.Name: @part.StatusName">
+                                <div style="text-align:center;">
+                                    <div>@part.StatusName</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="mt-3 d-flex align-items-center gap-3">
+                        <span style="display:inline-block;width:24px;height:24px;background:rgba(0,255,0,0.6);border-radius:4px;border:1px solid #000;"></span> Orjinal
+                        <span style="display:inline-block;width:24px;height:24px;background:rgba(0,123,255,0.8);border-radius:4px;border:1px solid #000;"></span> Boyalı
+                        <span style="display:inline-block;width:24px;height:24px;background:rgba(255,140,0,0.8);border-radius:4px;border:1px solid #000;"></span> Lokal Boyalı
+                        <span style="display:inline-block;width:24px;height:24px;background:rgba(255,0,0,0.6);border-radius:4px;border:1px solid #000;"></span> Değişen
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
 @section Scripts {
 <script>
     // Carousel'daki fotoğrafa tıklayınca modal aç

@@ -80,6 +80,7 @@ wwwroot\images\96d9cf0f-fc4a-4531-bedd-985a1b88e703.jpeg
 wwwroot\images\a27efd01-ee51-4980-afae-f5f8944573c6.jpeg
 wwwroot\images\a53f0156-3e6a-47ea-ad61-e266e00d3c60.jpeg
 wwwroot\images\araba_sablon.png
+wwwroot\images\araba_siluet.png
 wwwroot\images\c3986ef1-0fea-4cdc-b9b3-66a425c0d8cd.jpeg
 wwwroot\images\dbcafe6a-a2c6-40f0-8d75-64c03d8d53d3.jpeg
 wwwroot\images\logo.png

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mAQLeW19pYQM7V/97IwljqF+ceHXD80DOuWg15s/UNg=",
+  "Hash": "2NAumTLto7JrPWi72VpZFU0hnXnYgphnu1BZQ0LV/tA=",
   "Source": "CarWebSite",
   "BasePath": "_content/CarWebSite",
   "Mode": "Default",
@@ -1821,6 +1821,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\araba_sablon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\araba_siluet.png",
+      "SourceId": "CarWebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\",
+      "BasePath": "_content/CarWebSite",
+      "RelativePath": "images/araba_siluet#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rr8r2crpce",
+      "Integrity": "J0d1HAJgCOFB2uu9iLlz1wjC3wNcK2Hv9t+vaaMFi2w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\araba_siluet.png"
     },
     {
       "Identity": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\c3986ef1-0fea-4cdc-b9b3-66a425c0d8cd.jpeg",
@@ -5833,6 +5854,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-EJvThHpBs5O3FUNrxfIYTaP+MRHS7T5dvU5eqExiczI="
+        }
+      ]
+    },
+    {
+      "Route": "images/araba_siluet.png",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\araba_siluet.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "118045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J0d1HAJgCOFB2uu9iLlz1wjC3wNcK2Hv9t+vaaMFi2w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 15:58:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J0d1HAJgCOFB2uu9iLlz1wjC3wNcK2Hv9t+vaaMFi2w="
+        }
+      ]
+    },
+    {
+      "Route": "images/araba_siluet.rr8r2crpce.png",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\araba_siluet.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "118045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J0d1HAJgCOFB2uu9iLlz1wjC3wNcK2Hv9t+vaaMFi2w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 15:58:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rr8r2crpce"
+        },
+        {
+          "Name": "label",
+          "Value": "images/araba_siluet.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J0d1HAJgCOFB2uu9iLlz1wjC3wNcK2Hv9t+vaaMFi2w="
         }
       ]
     },

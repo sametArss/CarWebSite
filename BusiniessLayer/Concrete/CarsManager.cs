@@ -30,5 +30,10 @@ namespace BusiniessLayer.Concrete
         {
             _carsDal.Insert(car);
         }
+
+        public Cars GetByIdCars(int carId)
+        {
+            return _carsDal.GetById(carId);
+        }
     }
 }

@@ -14,13 +14,17 @@ public class CarsController : Controller
     private readonly IBrandService _brandService;
     private readonly IModelsService _modelsService;
     private readonly ICarImageService _carImageService;
+    private readonly IExpertisesService _expertisesService;
+    private readonly IPieceStatusService _pieceStatusService;
 
-    public CarsController(ICarsService carsService, IBrandService brandService, IModelsService modelsService, ICarImageService carImageService)
+    public CarsController(ICarsService carsService, IBrandService brandService, IModelsService modelsService, ICarImageService carImageService, IExpertisesService expertisesService, IPieceStatusService pieceStatusService)
     {
         _carsService = carsService;
         _brandService = brandService;
         _modelsService = modelsService;
         _carImageService = carImageService;
+        _expertisesService = expertisesService;
+        _pieceStatusService = pieceStatusService;
     }
 
     public IActionResult Index()
@@ -31,9 +35,11 @@ public class CarsController : Controller
 
     public IActionResult Detail(int id)
     {
-        var car = _carsService.GetAllCars().FirstOrDefault(x => x.CarId == id);
+        var car = _carsService.GetByIdCars(id);
         if (car == null)
             return NotFound();
+        var expertise = _expertisesService.GetByIdExpertise(id);
+        ViewBag.Expertise = expertise;
         return View(car);
     }
 

@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace BusiniessLayer.Abstract
 {
-    public interface IExpertiseDal:IRepositoriesDal<Expertise>
+    public interface IExpertiseDal : IRepositoriesDal<Expertise>
     {
+        
     }
 }

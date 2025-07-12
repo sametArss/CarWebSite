@@ -11,5 +11,7 @@ namespace BusiniessLayer.Abstract
     {
         List<Cars> GetAllCars();
         void AddCar(Cars car);
+
+        Cars GetByIdCars(int carId);
     }
 }

@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets\\images\\araba_sablon.png"
     },
     {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\araba_siluet.png",
+      "PackagePath": "staticwebassets\\images\\araba_siluet.png"
+    },
+    {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\c3986ef1-0fea-4cdc-b9b3-66a425c0d8cd.jpeg",
       "PackagePath": "staticwebassets\\images\\c3986ef1-0fea-4cdc-b9b3-66a425c0d8cd.jpeg"
     },
