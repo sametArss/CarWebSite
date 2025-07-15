@@ -9,5 +9,6 @@ namespace DataAcsessLayer.Abstract
 {
     public interface ICarsDal:IRepositoriesDal<Cars>
     {
+        Cars GetByIdCars(int id);
     }
 }

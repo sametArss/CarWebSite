@@ -5,13 +5,15 @@
         ? Model.CarImages.Select(x => x.ImagePath).ToList()
         : new List<string> { "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80" };
 }
+
+
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="card shadow-lg border-0 bg-dark text-light p-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-6">
-                        <div id="carDetailCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div id="carDetailCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
                             <div class="carousel-inner rounded-3">
                                 @for (int i = 0; i < images.Count; i++) {
                                     <div class="carousel-item @(i == 0 ? "active" : "")">
@@ -30,14 +32,31 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h2 class="fw-bold mb-2 display-4" style="color:#0d6efd;">@Model.Brand?.BrandName @Model.Models?.ModelName</h2>
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <h2 class="fw-bold display-4 mb-0" style="color:#0d6efd;">
+                                @Model.Brand?.BrandName @Model.Models?.ModelName
+                            </h2>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center p-0" type="button" id="carOptionsDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="width:38px;height:38px;line-height:1;">
+                                    <span style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:1.5rem;">&#8230;</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="carOptionsDropdown">
+                                    <li>
+                                        <button type="button" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#deleteCarModal">
+                                            Kaldır
+                                        </button>
+                                    </li>
+                                    <li><a class="dropdown-item" asp-controller="Cars" asp-action="Edit" asp-route-id="@Model.CarId">Güncelle</a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <h5 class="mb-3 text-secondary fs-4">@Model.Year Model</h5>
-                        <h4 class="fw-bold mb-3 fs-2">@Model.Price TL</h4>
+                        <h4 class="fw-bold mb-3 fs-2">@String.Format("{0:N0}", Model.Price) ₺</h4>
                         <p class="mb-4 fs-5">@Model.CarDescription</p>
                         <div class="row text-center mb-4">
                             <div class="col-4">
                                 <div class="p-3 bg-secondary bg-opacity-10 rounded">
-                                    <span class="fw-bold fs-5">@Model.KiloMetre</span><br>
+                                    <span class="fw-bold fs-5">@String.Format("{0:N0}", Model.KiloMetre)</span><br>
                                     <small>Kilometre</small>
                                 </div>
                             </div>
@@ -154,6 +173,26 @@
         </div>
     </div>
 }
+<!-- Sayfanın altına modal ekle -->
+<div class="modal fade" id="deleteCarModal" tabindex="-1" aria-labelledby="deleteCarModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteCarModalLabel">İlanı Kaldır</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                Arabayı ilandan kaldırmak istediğinize emin misiniz?
+            </div>
+            <div class="modal-footer">
+                <form asp-action="Delete" asp-route-id="@Model.CarId" method="post">
+                    <button type="submit" class="btn btn-danger">Evet</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hayır</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 @section Scripts {
 <script>
     // Carousel'daki fotoğrafa tıklayınca modal aç

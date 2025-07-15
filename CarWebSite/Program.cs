@@ -22,6 +22,8 @@ builder.Services.AddScoped<IModelsDal, EFModelsDal>();
 builder.Services.AddScoped<ICarImageDal, EFCarImageDal>();
 builder.Services.AddScoped<IExpertiseDal, EFExpertisesDal>();
 builder.Services.AddScoped<IPieceStatusDal, EFPieceStatusDal>();
+builder.Services.AddScoped<IMessageDal, EFMessageDal>();
+builder.Services.AddScoped<IAboutDal, EFAboutDal>();
 
 
 // ✅ Service (Business Layer) kayıtları
@@ -31,6 +33,8 @@ builder.Services.AddScoped<IModelsService, ModelsManager>();
 builder.Services.AddScoped<ICarImageService, CarImageManager>();
 builder.Services.AddScoped<IExpertisesService, ExpertiseManager>();
 builder.Services.AddScoped<IPieceStatusService, PieceStatusManager>();
+builder.Services.AddScoped<IAboutService, AboutManager>();
+builder.Services.AddScoped<IMessageService, MessageManager>();
 
 // ✅ MVC Controller ve View servisi
 builder.Services.AddControllersWithViews();

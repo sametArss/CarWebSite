@@ -33,11 +33,25 @@ public class CarsController : Controller
         return View(values);
     }
 
+    [HttpPost]
+    public IActionResult Delete(int id)
+    {
+        _carsService.Delete(id);
+        return RedirectToAction("Index");
+    }
+
     public IActionResult Detail(int id)
     {
         var car = _carsService.GetByIdCars(id);
         if (car == null)
             return NotFound();
+
+        // Brand ve Model adını çek
+        var brand = _brandService.GetAllBrands().FirstOrDefault(b => b.BrandId == car.BrandId);
+        var model = _modelsService.GetAllModels().FirstOrDefault(m => m.ModelId == car.ModelId);
+        ViewBag.BrandName = brand?.BrandName;
+        ViewBag.ModelName = model?.ModelName;
+
         var expertise = _expertisesService.GetByIdExpertise(id);
         ViewBag.Expertise = expertise;
         return View(car);
@@ -71,8 +85,8 @@ public class CarsController : Controller
     [HttpPost]
     public IActionResult Add(Cars car, List<IFormFile> carImages)
     {
-        car.CarId = 0; // CarId'yi sıfırla, EF Core yeni kayıt olarak algılasın
-        car.CreatedAt = DateTime.UtcNow; // CreatedAt'i UTC olarak ayarla
+        car.CarId = 0;
+        car.CreatedAt = DateTime.UtcNow; 
         if (ModelState.IsValid)
         {
             // Arabayı kaydet
@@ -105,13 +119,36 @@ public class CarsController : Controller
             }
             return RedirectToAction("Index");
         }
-        // ModelState hatalarını alan adıyla birlikte TempData'ya yazdır
-        //var errorList = ModelState
-        //    .Where(ms => ms.Value.Errors.Count > 0)
-        //    .Select(ms => $"<b>{ms.Key}</b>: {string.Join(", ", ms.Value.Errors.Select(e => e.ErrorMessage))}")
-        //    .ToList();
-        //TempData["FormErrors"] = string.Join("<br>", errorList);
+
         ViewBag.Brands = _brandService.GetAllBrands();
         return View(car);
     }
+
+    [HttpGet]
+    public IActionResult Edit(int id)
+    {
+        var car = _carsService.GetByIdCars(id);
+        if (car == null)
+            return NotFound();
+        ViewBag.Brands = _brandService.GetAllBrands();
+        // Model için markaya göre modelleri getir
+        ViewBag.Models = _modelsService.GetModelBrandId(car.BrandId);
+        return View(car);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(Cars car)
+    {
+        ModelState.Remove("CarImages");
+        if (ModelState.IsValid)
+        {
+            _carsService.Update(car);
+            return RedirectToAction("Index");
+        }
+        ViewBag.Brands = _brandService.GetAllBrands();
+        ViewBag.Models = _modelsService.GetModelBrandId(car.BrandId);
+        return View(car);
+    }
+
+   
 }

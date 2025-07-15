@@ -12,7 +12,7 @@
         {
             <div class="alert alert-danger">@Html.Raw(TempData["FormErrors"])</div>
         }
-        @Html.ValidationSummary(true, "Lütfen eksik veya hatalı alanları düzeltin:", new { @class = "alert alert-danger" })
+        @Html.ValidationSummary(false, "Lütfen eksik veya hatalı alanları düzeltin:", new { @class = "alert alert-danger" })
         <form asp-action="Add" method="post" enctype="multipart/form-data" autocomplete="off">
             <div class="mb-3">
                 <label class="form-label">Marka</label>
@@ -101,13 +101,6 @@
             } else {
                 $('#modelSelect').append('<option value="">Önce marka seçiniz</option>');
             }
-        });
-
-        // Form submit olmadan önce BrandId ve ModelId'yi ekrana yazdır
-        $("form").on("submit", function(e) {
-            var brandId = $("#brandSelect").val();
-            var modelId = $("#modelSelect").val();
-            alert("Gönderilecek BrandId: " + brandId + "\nGönderilecek ModelId: " + modelId);
         });
     </script>
 } 

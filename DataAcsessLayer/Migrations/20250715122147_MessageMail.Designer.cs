@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DataAcsessLayer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250709110812_RemoveExpertiseRequired")]
-    partial class RemoveExpertiseRequired
+    [Migration("20250715122147_MessageMail")]
+    partial class MessageMail
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,23 @@ namespace DataAcsessLayer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("EntityLayer.Models.About", b =>
+                {
+                    b.Property<int>("AboutId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("AboutId"));
+
+                    b.Property<string>("AboutMessage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("AboutId");
+
+                    b.ToTable("Abouts");
+                });
 
             modelBuilder.Entity("EntityLayer.Models.Brand", b =>
                 {
@@ -187,6 +204,34 @@ namespace DataAcsessLayer.Migrations
                     b.HasIndex("TavanStatusId");
 
                     b.ToTable("Expertises");
+                });
+
+            modelBuilder.Entity("EntityLayer.Models.Message", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("MessageId"));
+
+                    b.Property<string>("Mail")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("MessageCreateDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Messagess")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NameLName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("MessageId");
+
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("EntityLayer.Models.Models", b =>
@@ -366,6 +411,8 @@ namespace DataAcsessLayer.Migrations
             modelBuilder.Entity("EntityLayer.Models.Cars", b =>
                 {
                     b.Navigation("CarImages");
+
+                    b.Navigation("Expertise");
                 });
 
             modelBuilder.Entity("EntityLayer.Models.Models", b =>

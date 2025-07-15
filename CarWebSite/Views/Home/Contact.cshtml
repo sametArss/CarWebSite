@@ -1,5 +1,12 @@
+@model EntityLayer.Models.Message
+
 @{
     ViewData["Title"] = "İletişim";
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
 }
 <div class="py-5" style="background: linear-gradient(135deg, #232526 0%, #414345 100%); min-height: 100vh;">
     <div class="container">
@@ -13,18 +20,21 @@
                         <h1 class="fw-bold display-5 mt-3 mb-2" style="background: linear-gradient(90deg, #0d6efd 0%, #800020 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Bize Ulaşın</h1>
                         <p class="lead text-secondary mb-0">Her türlü soru, öneri ve talepleriniz için bize ulaşabilirsiniz.</p>
                     </div>
-                    <form>
+                    <form asp-action="Contact" method="post">
                         <div class="mb-3">
-                            <label for="ad" class="form-label">Adınız</label>
-                            <input type="text" class="form-control" id="ad" name="ad" required />
+                            <label asp-for="NameLName" class="form-label">Adınız</label>
+                            <input asp-for="NameLName" class="form-control" />
+                            <span asp-validation-for="NameLName" class="text-danger"></span>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">E-posta</label>
-                            <input type="email" class="form-control" id="email" name="email" required />
+                            <label asp-for="Mail" class="form-label">E-posta</label>
+                            <input asp-for="Mail" class="form-control" type="email" />
+                            <span asp-validation-for="Mail" class="text-danger"></span>
                         </div>
                         <div class="mb-3">
-                            <label for="mesaj" class="form-label">Mesajınız</label>
-                            <textarea class="form-control" id="mesaj" name="mesaj" rows="4" required></textarea>
+                            <label asp-for="Messagess" class="form-label">Mesajınız</label>
+                            <textarea asp-for="Messagess" class="form-control" rows="4"></textarea>
+                            <span asp-validation-for="Messagess" class="text-danger"></span>
                         </div>
                         <button type="submit" class="btn btn-primary w-100 py-2 fs-5">Gönder</button>
                     </form>
@@ -38,4 +48,7 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

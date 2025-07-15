@@ -1,3 +1,4 @@
+@model EntityLayer.Models.About
 @{
     ViewData["Title"] = "Hakkımızda";
 }
@@ -11,7 +12,7 @@
                             <svg width="70" height="70" fill="none" viewBox="0 0 24 24" stroke="#0d6efd"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2zm0 0V7m0 4v4m0 0c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2z"/></svg>
                         </span>
                         <h1 class="fw-bold display-5 mt-3 mb-2" style="background: linear-gradient(90deg, #0d6efd 0%, #800020 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: #e9ecef;">Hakkımızda</h1>
-                        <p class="lead mb-0" style="color: #e9ecef;">CarSam Motors, modern ve yenilikçi bir araç galerisi platformudur. Müşterilerimize en iyi araçları sunmak, güvenli ve kolay bir alışveriş deneyimi yaşatmak için çalışıyoruz. Geniş araç portföyümüz ve uzman ekibimizle, hayalinizdeki arabayı bulmanız için buradayız.</p>
+                        <p class="lead mb-0" style="color: #e9ecef;">@Model.AboutMessage</p>
                     </div>
                     <div class="row text-center mt-4">
                         <div class="col-md-4 mb-3">
@@ -37,7 +38,51 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-end mt-4">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateAboutModal">
+                        Güncelle
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="updateAboutModal" tabindex="-1" aria-labelledby="updateAboutModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-dark text-light">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="updateAboutModalLabel">Hakkımızda Metnini Güncelle</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                            </div>
+                            <div class="modal-body">
+                                <textarea id="aboutMessageInput" class="form-control" rows="6">@Model.AboutMessage</textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                                <button type="button" class="btn btn-success" id="saveAboutBtn">Kaydet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div> 
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('saveAboutBtn').addEventListener('click', function () {
+            var newMessage = document.getElementById('aboutMessageInput').value;
+            fetch('/Home/UpdateAbout', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newMessage) // Sadece string gönderiyoruz!
+            })
+            .then(response => response.ok ? response.json() : Promise.reject())
+            .then(data => {
+                if (data.success) {
+                    document.querySelector('.lead.mb-0').textContent = newMessage;
+                    var modal = bootstrap.Modal.getInstance(document.getElementById('updateAboutModal'));
+                    modal.hide();
+                }
+            });
+        });
+    </script>
+} 

@@ -23,6 +23,8 @@ namespace DataAcsessLayer.Concrete.Context
         public DbSet<PieceStatus> PieceStatuses { get; set; }
         public DbSet<Expertise> Expertises { get; set; }
         public DbSet<CarImage> CarImages { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

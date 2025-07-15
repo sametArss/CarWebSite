@@ -33,7 +33,18 @@ namespace BusiniessLayer.Concrete
 
         public Cars GetByIdCars(int carId)
         {
-            return _carsDal.GetById(carId);
+            return _carsDal.GetByIdCars(carId);
+        }
+
+        public void Update(Cars car)
+        {
+           _carsDal.Update(car);
+        }
+
+        public void Delete(int id)
+        {
+            var value = _carsDal.GetById(id);
+            _carsDal.Delete(value);
         }
     }
 }

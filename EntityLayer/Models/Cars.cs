@@ -10,30 +10,30 @@ namespace EntityLayer.Models
         [Key]
         public int CarId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Marka seçimi zorunludur.")]
         public int BrandId { get; set; }
 
         [ValidateNever]
         public virtual Brand Brand { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Model seçimi zorunludur.")]
         public int ModelId { get; set; }
 
         [ValidateNever]
         public virtual Models Models { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Kilometre alanı zorunludur.")]
         public int KiloMetre { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Yıl alanı zorunludur.")]
         public int Year { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Fiyat alanı zorunludur.")]
         public decimal Price { get; set; }
 
-        public bool CarStatus { get; set; }
+        public bool CarStatus { get; set; } = true;
 
-        [Required]
+        [Required(ErrorMessage = "Açıklama alanı zorunludur.")]
         public string CarDescription { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

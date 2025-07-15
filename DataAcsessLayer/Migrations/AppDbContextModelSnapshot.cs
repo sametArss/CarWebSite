@@ -22,6 +22,23 @@ namespace DataAcsessLayer.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("EntityLayer.Models.About", b =>
+                {
+                    b.Property<int>("AboutId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("AboutId"));
+
+                    b.Property<string>("AboutMessage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("AboutId");
+
+                    b.ToTable("Abouts");
+                });
+
             modelBuilder.Entity("EntityLayer.Models.Brand", b =>
                 {
                     b.Property<int>("BrandId")
@@ -117,12 +134,6 @@ namespace DataAcsessLayer.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ExpertiseId"));
 
-                    b.Property<int>("ArkaTampon")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("ArkaTamponStatusPieceId")
-                        .HasColumnType("integer");
-
                     b.Property<int>("BagajStatusId")
                         .HasColumnType("integer");
 
@@ -133,12 +144,6 @@ namespace DataAcsessLayer.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("KaputStatusId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("OnTamponDurum")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("OnTamponStatusPieceId")
                         .HasColumnType("integer");
 
                     b.Property<int>("SagArkaCamurlukStatusId")
@@ -170,16 +175,12 @@ namespace DataAcsessLayer.Migrations
 
                     b.HasKey("ExpertiseId");
 
-                    b.HasIndex("ArkaTamponStatusPieceId");
-
                     b.HasIndex("BagajStatusId");
 
                     b.HasIndex("CarId")
                         .IsUnique();
 
                     b.HasIndex("KaputStatusId");
-
-                    b.HasIndex("OnTamponStatusPieceId");
 
                     b.HasIndex("SagArkaCamurlukStatusId");
 
@@ -200,6 +201,37 @@ namespace DataAcsessLayer.Migrations
                     b.HasIndex("TavanStatusId");
 
                     b.ToTable("Expertises");
+                });
+
+            modelBuilder.Entity("EntityLayer.Models.Message", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("MessageId"));
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Mail")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("MessageCreateDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Messagess")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NameLName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("MessageId");
+
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("EntityLayer.Models.Models", b =>
@@ -274,12 +306,6 @@ namespace DataAcsessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Models.Expertise", b =>
                 {
-                    b.HasOne("EntityLayer.Models.PieceStatus", "ArkaTamponStatus")
-                        .WithMany()
-                        .HasForeignKey("ArkaTamponStatusPieceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("EntityLayer.Models.PieceStatus", "BagajStatus")
                         .WithMany()
                         .HasForeignKey("BagajStatusId")
@@ -296,12 +322,6 @@ namespace DataAcsessLayer.Migrations
                         .WithMany()
                         .HasForeignKey("KaputStatusId")
                         .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("EntityLayer.Models.PieceStatus", "OnTamponStatus")
-                        .WithMany()
-                        .HasForeignKey("OnTamponStatusPieceId")
-                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EntityLayer.Models.PieceStatus", "SagArkaCamurlukStatus")
@@ -358,15 +378,11 @@ namespace DataAcsessLayer.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("ArkaTamponStatus");
-
                     b.Navigation("BagajStatus");
 
                     b.Navigation("Car");
 
                     b.Navigation("KaputStatus");
-
-                    b.Navigation("OnTamponStatus");
 
                     b.Navigation("SagArkaCamurlukStatus");
 

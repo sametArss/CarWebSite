@@ -52,19 +52,14 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Cars" asp-action="Index">Araba Listesi</a>
                         </li>
-                        <!--
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Add">Araba Ekle</a>
-                        </li>
-                        -->
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Contact">İletişim</a>
                         </li>
@@ -72,14 +67,24 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">Hakkımızda</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" id="hizmetlerimizDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Hizmetlerimiz
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Hizmetler
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="hizmetlerimizDropdown">
+                            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="servicesDropdown">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" asp-controller="Home" asp-action="ListContact">
+                                        Mesajlar
+                                        @if (ViewBag.UnreadCount > 0)
+                                        {
+                                            <span class="badge bg-danger ms-2">@ViewBag.UnreadCount</span>
+                                        }
+                                    </a>
+                                </li>
                                 <li><a class="dropdown-item" href="#">Satış</a></li>
                                 <li><a class="dropdown-item" href="#">Takas</a></li>
                                 <li><a class="dropdown-item" href="#">Kredi</a></li>
                                 <li><a class="dropdown-item" href="#">Sigorta</a></li>
+                                <!-- Diğer hizmetler buraya eklenebilir -->
                             </ul>
                         </li>
                     </ul>

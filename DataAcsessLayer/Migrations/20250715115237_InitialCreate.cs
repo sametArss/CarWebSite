@@ -13,6 +13,19 @@ namespace DataAcsessLayer.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Abouts",
+                columns: table => new
+                {
+                    AboutId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    AboutMessage = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Abouts", x => x.AboutId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Brands",
                 columns: table => new
                 {
@@ -24,6 +37,21 @@ namespace DataAcsessLayer.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Brands", x => x.BrandId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Messages",
+                columns: table => new
+                {
+                    MessageId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    NameLName = table.Column<string>(type: "text", nullable: false),
+                    Messagess = table.Column<string>(type: "text", nullable: false),
+                    MessageCreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Messages", x => x.MessageId);
                 });
 
             migrationBuilder.CreateTable(
@@ -125,10 +153,6 @@ namespace DataAcsessLayer.Migrations
                     SagOnCamurlukStatusId = table.Column<int>(type: "integer", nullable: false),
                     SolArkaCamurlukStatusId = table.Column<int>(type: "integer", nullable: false),
                     SagArkaCamurlukStatusId = table.Column<int>(type: "integer", nullable: false),
-                    OnTamponDurum = table.Column<int>(type: "integer", nullable: false),
-                    OnTamponStatusPieceId = table.Column<int>(type: "integer", nullable: false),
-                    ArkaTampon = table.Column<int>(type: "integer", nullable: false),
-                    ArkaTamponStatusPieceId = table.Column<int>(type: "integer", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
@@ -139,12 +163,6 @@ namespace DataAcsessLayer.Migrations
                         column: x => x.CarId,
                         principalTable: "Cars",
                         principalColumn: "CarId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Expertises_PieceStatuses_ArkaTamponStatusPieceId",
-                        column: x => x.ArkaTamponStatusPieceId,
-                        principalTable: "PieceStatuses",
-                        principalColumn: "PieceId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Expertises_PieceStatuses_BagajStatusId",
@@ -158,12 +176,6 @@ namespace DataAcsessLayer.Migrations
                         principalTable: "PieceStatuses",
                         principalColumn: "PieceId",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Expertises_PieceStatuses_OnTamponStatusPieceId",
-                        column: x => x.OnTamponStatusPieceId,
-                        principalTable: "PieceStatuses",
-                        principalColumn: "PieceId",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Expertises_PieceStatuses_SagArkaCamurlukStatusId",
                         column: x => x.SagArkaCamurlukStatusId,
@@ -236,11 +248,6 @@ namespace DataAcsessLayer.Migrations
                 column: "ModelId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Expertises_ArkaTamponStatusPieceId",
-                table: "Expertises",
-                column: "ArkaTamponStatusPieceId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Expertises_BagajStatusId",
                 table: "Expertises",
                 column: "BagajStatusId");
@@ -255,11 +262,6 @@ namespace DataAcsessLayer.Migrations
                 name: "IX_Expertises_KaputStatusId",
                 table: "Expertises",
                 column: "KaputStatusId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Expertises_OnTamponStatusPieceId",
-                table: "Expertises",
-                column: "OnTamponStatusPieceId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Expertises_SagArkaCamurlukStatusId",
@@ -311,10 +313,16 @@ namespace DataAcsessLayer.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Abouts");
+
+            migrationBuilder.DropTable(
                 name: "CarImages");
 
             migrationBuilder.DropTable(
                 name: "Expertises");
+
+            migrationBuilder.DropTable(
+                name: "Messages");
 
             migrationBuilder.DropTable(
                 name: "Cars");

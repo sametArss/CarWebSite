@@ -1,0 +1,113 @@
+@model IEnumerable<EntityLayer.Models.Message>
+@{
+    ViewData["Title"] = "Gelen Mesajlar";
+}
+
+<h2 class="mb-4">Gelen Mesajlar</h2>
+
+@if (TempData["Delete"] != null)
+{
+    <div class="alert alert-success">@TempData["Delete"]</div>
+}
+
+<table class="table table-striped table-dark table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Ad Soyad</th>
+            <th>E-posta</th>
+            <th>Mesaj</th>
+            <th>Tarih</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            int i = 1;
+            foreach (var item in Model.OrderByDescending(x => x.MessageCreateDate))
+            {
+                var rowClass = item.IsRead ? "" : "table-warning";
+                <tr id="row-@item.MessageId" class="@rowClass">
+                    <td>@i</td>
+                    <td>@item.NameLName</td>
+                    <td>@item.Mail</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.Messagess) && item.Messagess.Length > 50)
+                        {
+                            @item.Messagess.Substring(0, 50) @:...
+                        }
+                        else
+                        {
+                            @item.Messagess
+                        }
+                    </td>
+                    <td>@item.MessageCreateDate.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>
+                        <!-- Detay butonu -->
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center me-1" style="width:36px;height:36px;" data-bs-toggle="modal" data-bs-target="#detailModal-@item.MessageId" title="Detay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eye text-primary" viewBox="0 0 16 16">
+                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8z"/>
+                                <path d="M8 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+                            </svg>
+                        </button>
+                        <!-- Sil butonu -->
+                        <form asp-action="DeleteContact" asp-route-id="@item.MessageId" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm" title="Sil">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5.5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6zm3 .5a.5.5 0 0 1 .5-.5.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6z"/>
+                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1 0-2h3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V4h11V3h-11z"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <!-- Modal -->
+                        <div class="modal fade" id="detailModal-@item.MessageId" tabindex="-1" aria-labelledby="detailModalLabel-@item.MessageId" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="detailModalLabel-@item.MessageId">Mesaj Detayı</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><strong>Ad Soyad:</strong> @item.NameLName</p>
+                                        <p><strong>E-posta:</strong> @item.Mail</p>
+                                        <p><strong>Mesaj:</strong> @item.Messagess</p>
+                                        <p><strong>Tarih:</strong> @item.MessageCreateDate.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                i++;
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center">Hiç mesaj yok.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('[data-bs-target^="#detailModal-"]').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var id = this.getAttribute('data-bs-target').replace('#detailModal-', '');
+                fetch('/Home/MarkAsRead', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'id=' + id
+                }).then(function() {
+                    // Satırdan table-warning'i kaldır
+                    var row = document.getElementById('row-' + id);
+                    if (row) {
+                        row.classList.remove('table-warning');
+                    }
+                });
+            });
+        });
+    </script>
+} 

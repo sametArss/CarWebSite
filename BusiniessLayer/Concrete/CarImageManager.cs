@@ -19,5 +19,11 @@ namespace BusiniessLayer.Concrete
                 _carImageDal.Insert(image);
             }
         }
+
+        public void Delete(int id)
+        {
+            var value = _carImageDal.GetById(id);   
+            _carImageDal.Delete(value);
+        }
     }
 } 
