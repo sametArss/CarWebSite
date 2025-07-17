@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,16 +7,17 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace DataAcsessLayer.Concrete.Context
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
-
         public AppDbContext(DbContextOptions<AppDbContext> options)
-          : base(options)
+            : base(options)
         {
         }
+
 
         public DbSet<Cars> Cars { get; set; }
         public DbSet<Brand> Brands { get; set; }

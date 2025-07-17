@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\images\\16fec331-d418-478b-9ef3-9b33049dc281.jpeg"
     },
     {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\1bd49379-6c1b-4a38-b79c-bcaee24ff18c.png",
+      "PackagePath": "staticwebassets\\images\\1bd49379-6c1b-4a38-b79c-bcaee24ff18c.png"
+    },
+    {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\1cca1f2c-0038-4110-8f8a-df32692a8ed9.png",
+      "PackagePath": "staticwebassets\\images\\1cca1f2c-0038-4110-8f8a-df32692a8ed9.png"
+    },
+    {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\2f04867c-795a-439e-b42f-8531b7c6d4ef.png",
       "PackagePath": "staticwebassets\\images\\2f04867c-795a-439e-b42f-8531b7c6d4ef.png"
     },
@@ -43,6 +51,10 @@
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\36af8b5d-ddab-403a-bdf6-1fc8b95e3422.png",
       "PackagePath": "staticwebassets\\images\\36af8b5d-ddab-403a-bdf6-1fc8b95e3422.png"
+    },
+    {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\3afe2d95-0f4d-4e5e-acf9-9814e5a2669b.png",
+      "PackagePath": "staticwebassets\\images\\3afe2d95-0f4d-4e5e-acf9-9814e5a2669b.png"
     },
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\402f33cc-b78a-44ad-9d96-54647a8c5bf3.png",
@@ -77,6 +89,10 @@
       "PackagePath": "staticwebassets\\images\\65b92657-7386-473d-9465-8c0191cca79a.png"
     },
     {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\6af25593-fcf5-4a17-9305-3162aec75908.png",
+      "PackagePath": "staticwebassets\\images\\6af25593-fcf5-4a17-9305-3162aec75908.png"
+    },
+    {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\73c160b8-ba94-42cc-b562-eb5c839161e1.jpeg",
       "PackagePath": "staticwebassets\\images\\73c160b8-ba94-42cc-b562-eb5c839161e1.jpeg"
     },
@@ -87,6 +103,10 @@
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\84b68ddb-eeba-441f-968a-2d4676091460.jpeg",
       "PackagePath": "staticwebassets\\images\\84b68ddb-eeba-441f-968a-2d4676091460.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\855739a1-975a-4996-b96b-4d3fda13b3b5.png",
+      "PackagePath": "staticwebassets\\images\\855739a1-975a-4996-b96b-4d3fda13b3b5.png"
     },
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\8f4f2580-1fce-45ff-9ba8-40b1bc9ee494.jpeg",
@@ -107,6 +127,10 @@
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\96d9cf0f-fc4a-4531-bedd-985a1b88e703.jpeg",
       "PackagePath": "staticwebassets\\images\\96d9cf0f-fc4a-4531-bedd-985a1b88e703.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\9d84d431-204a-47dd-9eb5-14004850b4ba.png",
+      "PackagePath": "staticwebassets\\images\\9d84d431-204a-47dd-9eb5-14004850b4ba.png"
     },
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\9eb808e6-48cf-47ec-bdf0-60620f76e396.png",
@@ -145,6 +169,10 @@
       "PackagePath": "staticwebassets\\images\\c3986ef1-0fea-4cdc-b9b3-66a425c0d8cd.jpeg"
     },
     {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\c6d15e31-0fe8-43b6-8a15-48532aa8b2e3.png",
+      "PackagePath": "staticwebassets\\images\\c6d15e31-0fe8-43b6-8a15-48532aa8b2e3.png"
+    },
+    {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\dbcafe6a-a2c6-40f0-8d75-64c03d8d53d3.jpeg",
       "PackagePath": "staticwebassets\\images\\dbcafe6a-a2c6-40f0-8d75-64c03d8d53d3.jpeg"
     },
@@ -155,6 +183,18 @@
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\e9ec904c-943d-482b-9e2f-60706d0e895d.png",
       "PackagePath": "staticwebassets\\images\\e9ec904c-943d-482b-9e2f-60706d0e895d.png"
+    },
+    {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\ee7cbd70-222b-4d73-b2ef-20241d37a314.png",
+      "PackagePath": "staticwebassets\\images\\ee7cbd70-222b-4d73-b2ef-20241d37a314.png"
+    },
+    {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\f146a1c4-0abd-4b39-8209-3d4c8a62a67c.png",
+      "PackagePath": "staticwebassets\\images\\f146a1c4-0abd-4b39-8209-3d4c8a62a67c.png"
+    },
+    {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\f6428ba8-daa5-4608-b841-e9052c351360.png",
+      "PackagePath": "staticwebassets\\images\\f6428ba8-daa5-4608-b841-e9052c351360.png"
     },
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\favicon.ico",
