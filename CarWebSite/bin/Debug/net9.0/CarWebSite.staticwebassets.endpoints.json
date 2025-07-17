@@ -599,13 +599,13 @@
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "favicon.ico.gz",
+      "Route": "favicon2.61n19gt1b8.ico",
+      "AssetFile": "favicon2.ico.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000405022276"
+          "Quality": "0.000411015208"
         }
       ],
       "ResponseHeaders": [
@@ -623,7 +623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2468"
+          "Value": "2432"
         },
         {
           "Name": "Content-Type",
@@ -631,7 +631,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=\""
+          "Value": "\"jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8=\""
         },
         {
           "Name": "ETag",
@@ -657,13 +657,13 @@
         },
         {
           "Name": "label",
-          "Value": "favicon.ico"
+          "Value": "favicon2.ico"
         }
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "favicon.ico",
+      "Route": "favicon2.61n19gt1b8.ico",
+      "AssetFile": "favicon2.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -702,13 +702,13 @@
         },
         {
           "Name": "label",
-          "Value": "favicon.ico"
+          "Value": "favicon2.ico"
         }
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico.gz",
-      "AssetFile": "favicon.ico.gz",
+      "Route": "favicon2.61n19gt1b8.ico.gz",
+      "AssetFile": "favicon2.ico.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -725,7 +725,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2468"
+          "Value": "2432"
         },
         {
           "Name": "Content-Type",
@@ -733,7 +733,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=\""
+          "Value": "\"jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8=\""
         },
         {
           "Name": "Last-Modified",
@@ -751,22 +751,22 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+          "Value": "sha256-jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8="
         },
         {
           "Name": "label",
-          "Value": "favicon.ico.gz"
+          "Value": "favicon2.ico.gz"
         }
       ]
     },
     {
-      "Route": "favicon.ico",
-      "AssetFile": "favicon.ico.gz",
+      "Route": "favicon2.ico",
+      "AssetFile": "favicon2.ico.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000405022276"
+          "Quality": "0.000411015208"
         }
       ],
       "ResponseHeaders": [
@@ -784,7 +784,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2468"
+          "Value": "2432"
         },
         {
           "Name": "Content-Type",
@@ -792,7 +792,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=\""
+          "Value": "\"jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8=\""
         },
         {
           "Name": "ETag",
@@ -815,8 +815,8 @@
       ]
     },
     {
-      "Route": "favicon.ico",
-      "AssetFile": "favicon.ico",
+      "Route": "favicon2.ico",
+      "AssetFile": "favicon2.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -852,8 +852,8 @@
       ]
     },
     {
-      "Route": "favicon.ico.gz",
-      "AssetFile": "favicon.ico.gz",
+      "Route": "favicon2.ico.gz",
+      "AssetFile": "favicon2.ico.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -870,7 +870,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2468"
+          "Value": "2432"
         },
         {
           "Name": "Content-Type",
@@ -878,7 +878,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=\""
+          "Value": "\"jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8=\""
         },
         {
           "Name": "Last-Modified",
@@ -892,7 +892,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+          "Value": "sha256-jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8="
         }
       ]
     },
@@ -3845,6 +3845,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-X/8YhNAYl1Lu5mzayGZc0vuvkwskBU58BQB4cmJRMgw="
+        }
+      ]
+    },
+    {
+      "Route": "images/favicon.eknzksqqqj.ico",
+      "AssetFile": "images/favicon.ico.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000444049734"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2251"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iWtlqJNPQnmhUEkI/3f6TPb0Y5QzT8iDkfMv1nF/Vjk=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 05:40:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eknzksqqqj"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI="
+        },
+        {
+          "Name": "label",
+          "Value": "images/favicon.ico"
+        }
+      ]
+    },
+    {
+      "Route": "images/favicon.eknzksqqqj.ico",
+      "AssetFile": "images/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15086"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 05:40:12 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eknzksqqqj"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI="
+        },
+        {
+          "Name": "label",
+          "Value": "images/favicon.ico"
+        }
+      ]
+    },
+    {
+      "Route": "images/favicon.eknzksqqqj.ico.gz",
+      "AssetFile": "images/favicon.ico.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2251"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iWtlqJNPQnmhUEkI/3f6TPb0Y5QzT8iDkfMv1nF/Vjk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 05:40:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eknzksqqqj"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iWtlqJNPQnmhUEkI/3f6TPb0Y5QzT8iDkfMv1nF/Vjk="
+        },
+        {
+          "Name": "label",
+          "Value": "images/favicon.ico.gz"
+        }
+      ]
+    },
+    {
+      "Route": "images/favicon.ico",
+      "AssetFile": "images/favicon.ico.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000444049734"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2251"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iWtlqJNPQnmhUEkI/3f6TPb0Y5QzT8iDkfMv1nF/Vjk=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 05:40:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI="
+        }
+      ]
+    },
+    {
+      "Route": "images/favicon.ico",
+      "AssetFile": "images/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15086"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 05:40:12 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI="
+        }
+      ]
+    },
+    {
+      "Route": "images/favicon.ico.gz",
+      "AssetFile": "images/favicon.ico.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2251"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iWtlqJNPQnmhUEkI/3f6TPb0Y5QzT8iDkfMv1nF/Vjk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 05:40:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iWtlqJNPQnmhUEkI/3f6TPb0Y5QzT8iDkfMv1nF/Vjk="
         }
       ]
     },

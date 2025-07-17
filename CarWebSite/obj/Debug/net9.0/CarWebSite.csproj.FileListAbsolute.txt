@@ -126,7 +126,6 @@ C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\scopedcss\Views\Sh
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\scopedcss\bundle\CarWebSite.styles.css
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\scopedcss\projectbundle\CarWebSite.bundle.scp.css
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\compressed\3wwtdu46dp-ytgdr7zfs1.gz
-C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\compressed\pkf89hkfbt-61n19gt1b8.gz
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\compressed\z1uvoyangt-xtxxf3hu2r.gz
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\compressed\31ydlap02d-bqjiyaj88i.gz
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\compressed\hqnia3ijf6-c2jlpeoesf.gz
@@ -205,3 +204,5 @@ C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.pdb
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\CarWebSite.genruntimeconfig.cache
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\ref\CarWebSite.dll
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\compressed\om6od0g3lt-61n19gt1b8.gz
+C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\compressed\j1otok2ovm-eknzksqqqj.gz

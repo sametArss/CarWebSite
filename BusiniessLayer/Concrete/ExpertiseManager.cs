@@ -14,11 +14,11 @@ namespace BusiniessLayer.Concrete
     public class ExpertiseManager : IExpertisesService
     {
         private readonly IExpertiseDal _expertiseDal;
-        private readonly AppDbContext _context;
-        public ExpertiseManager(IExpertiseDal expertiseDal, AppDbContext context)
+        
+        public ExpertiseManager(IExpertiseDal expertiseDal)
         {
             _expertiseDal = expertiseDal;
-            _context = context;
+            
         }
 
      
@@ -43,6 +43,11 @@ namespace BusiniessLayer.Concrete
         public void Insert(Expertise e)
         {
             _expertiseDal.Insert(e);
+        }
+
+        public void Update(Expertise expertise)
+        {
+            _expertiseDal.Update(expertise);
         }
     }
 }

@@ -24,14 +24,14 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ytgdr7zfs1"},{"Name":"integrity","Value":"sha256-dv1sy5POpMJXfW5ds/zCJS5Ux6dD1i2ruXdxy5zKDgw="},{"Name":"label","Value":"_content/CarWebSite/css/site.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2517"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022dv1sy5POpMJXfW5ds/zCJS5Ux6dD1i2ruXdxy5zKDgw=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Jul 2025 20:42:47 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/CarWebSite/favicon.61n19gt1b8.ico">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/CarWebSite/favicon2.61n19gt1b8.ico">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon2.ico'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"61n19gt1b8"},{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="},{"Name":"label","Value":"_content/CarWebSite/favicon.ico"}]]]></EndpointProperties>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"61n19gt1b8"},{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="},{"Name":"label","Value":"_content/CarWebSite/favicon2.ico"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Jul 2025 19:43:49 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/CarWebSite/favicon.ico">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/CarWebSite/favicon2.ico">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon2.ico'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Jul 2025 19:43:49 GMT"}]]]></ResponseHeaders>
@@ -467,6 +467,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-X/8YhNAYl1Lu5mzayGZc0vuvkwskBU58BQB4cmJRMgw="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"65113"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022X/8YhNAYl1Lu5mzayGZc0vuvkwskBU58BQB4cmJRMgw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 15 Jul 2025 14:03:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CarWebSite/images/favicon.eknzksqqqj.ico">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\favicon.ico'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"eknzksqqqj"},{"Name":"integrity","Value":"sha256-8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI="},{"Name":"label","Value":"_content/CarWebSite/images/favicon.ico"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"15086"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u00228vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Jul 2025 05:40:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CarWebSite/images/favicon.ico">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\favicon.ico'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"15086"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u00228vmbtSHAcOHLBp1fh/UidC7ngdYZa8Jn57idb1HlqaI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Jul 2025 05:40:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CarWebSite/images/logo.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\logo.png'))</AssetFile>

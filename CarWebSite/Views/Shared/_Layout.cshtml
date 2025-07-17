@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CarWebSite.styles.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="~/images/favicon.ico" />
     <style>
         .navbar {
             min-height: 72px;
@@ -93,6 +94,13 @@
         </nav>
     </header>
     <div class="container">
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                @TempData["Message"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

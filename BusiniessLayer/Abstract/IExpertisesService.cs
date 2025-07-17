@@ -11,7 +11,9 @@ namespace BusiniessLayer.Abstract
     {
 
         void Insert(Expertise e);
-        Expertise GetByIdExpertise(int id); 
+        Expertise GetByIdExpertise(int id);
+
+        void Update(Expertise expertise);
        
     }
 }

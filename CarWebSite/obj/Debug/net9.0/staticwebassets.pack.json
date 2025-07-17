@@ -9,8 +9,8 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\favicon2.ico",
+      "PackagePath": "staticwebassets\\favicon2.ico"
     },
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\0360967d-f421-45b3-bbd2-366f04ebebc1.jpeg",
@@ -155,6 +155,10 @@
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\e9ec904c-943d-482b-9e2f-60706d0e895d.png",
       "PackagePath": "staticwebassets\\images\\e9ec904c-943d-482b-9e2f-60706d0e895d.png"
+    },
+    {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
     },
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\logo.png",

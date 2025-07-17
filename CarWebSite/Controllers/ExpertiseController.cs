@@ -25,6 +25,7 @@ namespace CarWebSite.Controllers
         [HttpGet]
         public async Task<IActionResult> Create(int carId)
         {
+            
             var pieceStatuses =_pieceStatusService.GetAll();
             ViewBag.PieceStatuses = pieceStatuses;
             ViewBag.CarId = carId;
@@ -36,13 +37,34 @@ namespace CarWebSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Expertise expertise)
         {
-            if (ModelState.IsValid)
+            var expertiseValue = _expertisesService.GetByIdExpertise(expertise.CarId);
+
+            if (ModelState.IsValid && expertiseValue == null)
             {
-                //_context.Expertises.Add(expertise);
-                //await _context.SaveChangesAsync();
                 _expertisesService.Insert(expertise);
-                return RedirectToAction("Index", "Cars"); // veya başka bir uygun sayfa
+                TempData["Message"] = "Ekspertiz başarıyla eklendi!";
+                return RedirectToAction("Index", "Cars");
             }
+            else if (ModelState.IsValid && expertiseValue != null)
+            {
+                expertiseValue.KaputStatusId = expertise.KaputStatusId;
+                expertiseValue.TavanStatusId = expertise.TavanStatusId;
+                expertiseValue.BagajStatusId = expertise.BagajStatusId;
+                expertiseValue.SolOnKapıStatusId = expertise.SolOnKapıStatusId;
+                expertiseValue.SagOnKapıStatusId = expertise.SagOnKapıStatusId;
+                expertiseValue.SolArkaKapıStatusId = expertise.SolArkaKapıStatusId;
+                expertiseValue.SagArkaKapıStatusId = expertise.SagArkaKapıStatusId;
+                expertiseValue.SolOnCamurlukStatusId = expertise.SolOnCamurlukStatusId;
+                expertiseValue.SagOnCamurlukStatusId = expertise.SagOnCamurlukStatusId;
+                expertiseValue.SolArkaCamurlukStatusId = expertise.SolArkaCamurlukStatusId;
+                expertiseValue.SagArkaCamurlukStatusId = expertise.SagArkaCamurlukStatusId;
+                expertiseValue.CreatedAt = expertise.CreatedAt;
+
+                _expertisesService.Update(expertiseValue);
+                TempData["Message"] = "Ekspertiz başarıyla güncellendi!";
+                return RedirectToAction("Index", "Cars");
+            }
+
             ViewBag.PieceStatuses = _pieceStatusService.GetAll();
             ViewBag.CarId = expertise.CarId;
             return View(expertise);
