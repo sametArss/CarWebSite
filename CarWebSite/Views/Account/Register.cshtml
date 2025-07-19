@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="~/css/auth.css" />
+@model CarWebSite.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Kayıt Ol";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="auth-bg">
+    <div class="auth-card">
+        <img src="/images/rasa-logo.png" alt="RASA OTO GALERİ" class="auth-logo" />
+        <div class="auth-title">Kayıt Ol</div>
+        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+        <form asp-action="Register" method="post" autocomplete="off">
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control bg-dark text-light border-0 shadow-sm" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control bg-dark text-light border-0 shadow-sm" />
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="ConfirmPassword" class="form-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control bg-dark text-light border-0 shadow-sm" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+            </div>
+            <button type="submit" class="btn auth-btn w-100 py-2 mb-2">Kayıt Ol</button>
+        </form>
+        <div class="text-center mt-2">
+            <a asp-action="Login" class="auth-link">Zaten hesabınız var mı? Giriş Yapın</a>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} 

@@ -5,6 +5,7 @@ using EntityLayer.Models;
 using System.Linq;
 using System.Threading.Tasks;
 using BusiniessLayer.Abstract;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CarWebSite.Controllers
 {
@@ -14,7 +15,7 @@ namespace CarWebSite.Controllers
         private readonly IPieceStatusService _pieceStatusService;
         private readonly IExpertisesService _expertisesService;
 
-        public ExpertiseController(AppDbContext context , IPieceStatusService pieceStatusService, IExpertisesService expertisesService)
+        public ExpertiseController(AppDbContext context, IPieceStatusService pieceStatusService, IExpertisesService expertisesService)
         {
             _context = context;
             _pieceStatusService = pieceStatusService;
@@ -22,11 +23,12 @@ namespace CarWebSite.Controllers
         }
 
         // GET: /Expertise/Create/{carId}
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Create(int carId)
         {
-            
-            var pieceStatuses =_pieceStatusService.GetAll();
+
+            var pieceStatuses = _pieceStatusService.GetAll();
             ViewBag.PieceStatuses = pieceStatuses;
             ViewBag.CarId = carId;
             return View();
@@ -77,4 +79,4 @@ namespace CarWebSite.Controllers
             return View(value);
         }
     }
-} 
+}

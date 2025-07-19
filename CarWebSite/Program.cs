@@ -8,12 +8,21 @@ using DataAcsessLayer.Abstract;
 using DataAcsessLayer.EntityFramework;
 using BusiniessLayer.Abstract;
 using BusiniessLayer.Concrete;
+using EntityLayer.Models;
+using Microsoft.AspNetCore.Identity;
+using CarWebSite.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // ✅ PostgreSQL bağlantısı
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// ✅ Identity servisleri EKLENDİ
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddErrorDescriber<TurkishIdentityErrorDescriber>()
+    .AddDefaultTokenProviders();
 
 // ✅ Repository (Data Access Layer) kayıtları
 builder.Services.AddScoped<ICarsDal, EFCarsDal>();
@@ -53,6 +62,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); // EKLENDİ
 app.UseAuthorization();
 
 // ✅ Varsayılan route ayarı

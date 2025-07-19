@@ -211,3 +211,4 @@ C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\Microsoft.AspNetCo
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Samet\Desktop\CarWebSite\CarWebSite\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Samet\Desktop\CarWebSite\CarWebSite\obj\Debug\net9.0\compressed\srs2fmft22-isebmfzn2h.gz

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Rajjo7kEMMnuFSwPsvanXvLqiBgHFCNdn1d1i+ZXph4=",
+  "Hash": "zcSL/Rk3+CgbqxOPOxEi7zjcBELdXcZlCQZ4ZIx8vAs=",
   "Source": "CarWebSite",
   "BasePath": "_content/CarWebSite",
   "Mode": "Default",
@@ -1172,6 +1172,27 @@
       "OriginalItemSpec": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
+      "Identity": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\obj\\Debug\\net9.0\\compressed\\srs2fmft22-isebmfzn2h.gz",
+      "SourceId": "CarWebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/CarWebSite",
+      "RelativePath": "css/auth#[.{fingerprint=isebmfzn2h}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\css\\auth.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "xfqnsxhb14",
+      "Integrity": "Y4r0wlDT51HoSN41UVPg24TJDQULliMXXs7Vy0SBeKk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\css\\auth.css"
+    },
+    {
       "Identity": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\obj\\Debug\\net9.0\\compressed\\st443mioez-c2oey78nd0.gz",
       "SourceId": "CarWebSite",
       "SourceType": "Discovered",
@@ -1422,6 +1443,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\CarWebSite.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\css\\auth.css",
+      "SourceId": "CarWebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\",
+      "BasePath": "_content/CarWebSite",
+      "RelativePath": "css/auth#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "isebmfzn2h",
+      "Integrity": "ooHoJdjsU8MPgQlZXCi/wXndIuova2+SgqCO5D+cdqE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\auth.css"
     },
     {
       "Identity": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\css\\site.css",
@@ -2472,6 +2514,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\rasa-logo.png",
+      "SourceId": "CarWebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\",
+      "BasePath": "_content/CarWebSite",
+      "RelativePath": "images/rasa-logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wkfkqu9c1n",
+      "Integrity": "IFL4pjkJbc/QwEao4TFqfP05KJg9vR0iK5/O2RaVAeM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\rasa-logo.png"
     },
     {
       "Identity": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\js\\site.js",
@@ -4349,6 +4412,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-n/TlmfsSbugC5tjCHPunbZVt43OlclAKtyCwx+soF8g="
+        }
+      ]
+    },
+    {
+      "Route": "css/auth.css",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\obj\\Debug\\net9.0\\compressed\\srs2fmft22-isebmfzn2h.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001512859304"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "660"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y4r0wlDT51HoSN41UVPg24TJDQULliMXXs7Vy0SBeKk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Jul 2025 08:40:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ooHoJdjsU8MPgQlZXCi/wXndIuova2+SgqCO5D+cdqE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ooHoJdjsU8MPgQlZXCi/wXndIuova2+SgqCO5D+cdqE="
+        }
+      ]
+    },
+    {
+      "Route": "css/auth.css",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\css\\auth.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1688"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ooHoJdjsU8MPgQlZXCi/wXndIuova2+SgqCO5D+cdqE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Jul 2025 08:40:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ooHoJdjsU8MPgQlZXCi/wXndIuova2+SgqCO5D+cdqE="
+        }
+      ]
+    },
+    {
+      "Route": "css/auth.css.gz",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\obj\\Debug\\net9.0\\compressed\\srs2fmft22-isebmfzn2h.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y4r0wlDT51HoSN41UVPg24TJDQULliMXXs7Vy0SBeKk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Jul 2025 08:40:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y4r0wlDT51HoSN41UVPg24TJDQULliMXXs7Vy0SBeKk="
+        }
+      ]
+    },
+    {
+      "Route": "css/auth.isebmfzn2h.css",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\obj\\Debug\\net9.0\\compressed\\srs2fmft22-isebmfzn2h.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001512859304"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "660"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y4r0wlDT51HoSN41UVPg24TJDQULliMXXs7Vy0SBeKk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Jul 2025 08:40:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ooHoJdjsU8MPgQlZXCi/wXndIuova2+SgqCO5D+cdqE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "isebmfzn2h"
+        },
+        {
+          "Name": "label",
+          "Value": "css/auth.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ooHoJdjsU8MPgQlZXCi/wXndIuova2+SgqCO5D+cdqE="
+        }
+      ]
+    },
+    {
+      "Route": "css/auth.isebmfzn2h.css",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\css\\auth.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1688"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ooHoJdjsU8MPgQlZXCi/wXndIuova2+SgqCO5D+cdqE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Jul 2025 08:40:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "isebmfzn2h"
+        },
+        {
+          "Name": "label",
+          "Value": "css/auth.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ooHoJdjsU8MPgQlZXCi/wXndIuova2+SgqCO5D+cdqE="
+        }
+      ]
+    },
+    {
+      "Route": "css/auth.isebmfzn2h.css.gz",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\obj\\Debug\\net9.0\\compressed\\srs2fmft22-isebmfzn2h.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y4r0wlDT51HoSN41UVPg24TJDQULliMXXs7Vy0SBeKk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Jul 2025 08:40:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "isebmfzn2h"
+        },
+        {
+          "Name": "label",
+          "Value": "css/auth.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y4r0wlDT51HoSN41UVPg24TJDQULliMXXs7Vy0SBeKk="
         }
       ]
     },
@@ -9093,6 +9454,88 @@
         {
           "Name": "label",
           "Value": "images/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IFL4pjkJbc/QwEao4TFqfP05KJg9vR0iK5/O2RaVAeM="
+        }
+      ]
+    },
+    {
+      "Route": "images/rasa-logo.png",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\rasa-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236269"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IFL4pjkJbc/QwEao4TFqfP05KJg9vR0iK5/O2RaVAeM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 10:24:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IFL4pjkJbc/QwEao4TFqfP05KJg9vR0iK5/O2RaVAeM="
+        }
+      ]
+    },
+    {
+      "Route": "images/rasa-logo.wkfkqu9c1n.png",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\rasa-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236269"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IFL4pjkJbc/QwEao4TFqfP05KJg9vR0iK5/O2RaVAeM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 10:24:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wkfkqu9c1n"
+        },
+        {
+          "Name": "label",
+          "Value": "images/rasa-logo.png"
         },
         {
           "Name": "integrity",

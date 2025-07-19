@@ -15,6 +15,7 @@
             min-height: 72px;
             font-family: 'Poppins', Arial, sans-serif;
         }
+
         .navbar-brand span {
             font-size: 2.2rem !important;
             font-weight: 700 !important;
@@ -22,9 +23,9 @@
             transition: color 0.3s ease; /* Smooth transition for color change */
         }
 
-        .navbar-brand span:hover {
-            color: #006400 !important; /* Dark green color on hover */
-        }
+            .navbar-brand span:hover {
+                color: #006400 !important; /* Dark green color on hover */
+            }
 
         .navbar-nav .nav-link {
             font-size: 1.15rem;
@@ -34,9 +35,10 @@
             padding-left: 1.2rem !important;
             padding-right: 1.2rem !important;
         }
-        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+
+            .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
                 color: #006400 !important;
-        }
+            }
     </style>
 </head>
 <body class="bg-dark text-light">
@@ -45,7 +47,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center gap-2" asp-area="" asp-controller="Home" asp-action="Index">
                     <span style="display: flex; align-items: center;">
-                        <img src="~/images/logo.png" alt="RASA Oto Galeri Logo" style="height: 80px; width: auto; border-radius: 50%;"/>
+                        <img src="~/images/logo.png" alt="RASA Oto Galeri Logo" style="height: 80px; width: auto; border-radius: 50%;" />
                     </span>
                     <span class="fw-bold fs-3" style="letter-spacing:1px;">RASA Motor's</span>
                 </a>
@@ -72,19 +74,27 @@
                                 Hizmetler
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="servicesDropdown">
-                                <li>
-                                    <a class="dropdown-item d-flex align-items-center" asp-controller="Home" asp-action="ListContact">
-                                        Mesajlar
-                                        @if (ViewBag.UnreadCount > 0)
-                                        {
-                                            <span class="badge bg-danger ms-2">@ViewBag.UnreadCount</span>
-                                        }
-                                    </a>
-                                </li>
+
+                                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                                {
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center" asp-controller="Home" asp-action="ListContact">
+                                            Mesajlar
+                                            @if (ViewBag.UnreadCount > 0)
+                                            {
+                                                <span class="badge bg-danger ms-2">@ViewBag.UnreadCount</span>
+                                            }
+                                        </a>
+                                    </li>
+                                }
                                 <li><a class="dropdown-item" href="#">Satış</a></li>
                                 <li><a class="dropdown-item" href="#">Takas</a></li>
                                 <li><a class="dropdown-item" href="#">Kredi</a></li>
                                 <li><a class="dropdown-item" href="#">Sigorta</a></li>
+                                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                                {
+                                    <li><a class="dropdown-item" asp-controller="Account" asp-action="Logout">Çıkış Yap</a></li>
+                                }
                                 <!-- Diğer hizmetler buraya eklenebilir -->
                             </ul>
                         </li>

@@ -38,11 +38,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-end mt-4">
-                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateAboutModal">
-                        Güncelle
-                    </button>
-                </div>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                {
+                    <div class="text-end mt-4">
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateAboutModal">
+                            Güncelle
+                        </button>
+                    </div>
+                    }
+               
                 <!-- Modal -->
                 <div class="modal fade" id="updateAboutModal" tabindex="-1" aria-labelledby="updateAboutModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -85,4 +89,4 @@
             });
         });
     </script>
-} 
+}

@@ -3,8 +3,22 @@
     ViewData["Title"] = "Araba Listesi";
 }
 <div class="container py-5">
-    <h2 class="fw-bold text-center mb-5">Araba Listesi</h2>
-    <div class="row g-4 justify-content-center">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+        <h2 class="fw-bold text-center text-md-start mb-0">Araba Listesi</h2>
+        <form method="get" asp-action="Index" class="mb-0 d-flex align-items-center gap-2 justify-content-end" style="min-width:320px;">
+            <span class="fw-semibold text-secondary" style="white-space:nowrap;">Filtreleme:</span>
+            <select id="sortOrder" name="sortOrder" class="form-select shadow-sm" style="border-radius: 0.7rem; box-shadow: 0 2px 12px rgba(0,0,0,0.08); min-width:200px;" onchange="this.form.submit()">
+                <option value="" selected="@(string.IsNullOrEmpty(Context.Request.Query["sortOrder"]) ? "selected" : null)">Varsayılan</option>
+                <option value="price_asc" selected="@(Context.Request.Query["sortOrder"]=="price_asc" ? "selected" : null)">Fiyat (Artan)</option>
+                <option value="price_desc" selected="@(Context.Request.Query["sortOrder"]=="price_desc" ? "selected" : null)">Fiyat (Azalan)</option>
+                <option value="year_desc" selected="@(Context.Request.Query["sortOrder"]=="year_desc" ? "selected" : null)">Model Yılı (Yeni → Eski)</option>
+                <option value="year_asc" selected="@(Context.Request.Query["sortOrder"]=="year_asc" ? "selected" : null)">Model Yılı (Eski → Yeni)</option>
+                <option value="date_desc" selected="@(Context.Request.Query["sortOrder"]=="date_desc" ? "selected" : null)">Eklenme Tarihi (Yeni → Eski)</option>
+                <option value="date_asc" selected="@(Context.Request.Query["sortOrder"]=="date_asc" ? "selected" : null)">Eklenme Tarihi (Eski → Yeni)</option>
+            </select>
+        </form>
+    </div>
+    <div class="row g-4 justify-content-center" id="car-list">
         @if (Model != null && Model.Any())
         {
             @foreach (var car in Model)
@@ -17,7 +31,10 @@
                             <p class="card-text mb-1">Yıl: @car.Year</p>
                             <p class="card-text mb-2">Fiyat: @car.Price TL</p>
                             <a href="@Url.Action("Detail", "Cars", new { id = car.CarId })" class="btn btn-outline-primary w-100">İncele</a>
-                            <a href="@Url.Action("Create", "Expertise", new { carId = car.CarId })" class="btn btn-outline-warning w-100 mt-2">Ekspertiz Ekle / Güncelle</a>
+                            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                            {
+                                <a href="@Url.Action("Create", "Expertise", new { carId = car.CarId })" class="btn btn-outline-warning w-100 mt-2">Ekspertiz Ekle / Güncelle</a>
+                            }
                         </div>
                     </div>
                 </div>
@@ -30,9 +47,54 @@
             </div>
         }
     </div>
-    <div class="text-end mt-4">
-        <a class="btn btn-success btn-lg px-4" asp-controller="Cars" asp-action="Add">
-            + Araba Ekle
-        </a>
+    <div id="loading" class="text-center my-4" style="display:none;">
+        <span class="spinner-border text-primary"></span>
+        <span class="ms-2">Yükleniyor...</span>
     </div>
-</div> 
+    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        <div class="text-end mt-4">
+            <a class="btn btn-success btn-lg px-4" asp-controller="Cars" asp-action="Add">
+                + Araba Ekle
+            </a>
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+    <script>
+        let page = 1;
+        let loading = false;
+        let noMoreData = false;
+        // Seçili sıralama parametresini al
+        function getSortOrder() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('sortOrder') || '';
+        }
+        window.onscroll = function() {
+            if (noMoreData || loading) return;
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
+                loading = true;
+                page++;
+                document.getElementById('loading').style.display = 'block';
+                const sortOrder = getSortOrder();
+                fetch(`/Cars/LoadMore?page=${page}&sortOrder=${encodeURIComponent(sortOrder)}`)
+                    .then(response => response.text())
+                    .then(html => {
+                        if (html.trim() === "") {
+                            noMoreData = true;
+                        } else {
+                            document.getElementById('car-list').insertAdjacentHTML('beforeend', html);
+                        }
+                        loading = false;
+                        document.getElementById('loading').style.display = 'none';
+                    })
+                    .catch(() => {
+                        loading = false;
+                        document.getElementById('loading').style.display = 'none';
+                    });
+            }
+        };
+    </script>
+} 

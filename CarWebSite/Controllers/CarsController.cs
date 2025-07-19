@@ -1,6 +1,7 @@
 ﻿using BusiniessLayer.Abstract;
 using DataAcsessLayer.Concrete.Context;
 using EntityLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -27,12 +28,36 @@ public class CarsController : Controller
         _pieceStatusService = pieceStatusService;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(string sortOrder)
     {
         var values = _carsService.GetAllCars();
+        switch (sortOrder)
+        {
+            case "price_asc":
+                values = values.OrderBy(x => x.Price).ToList();
+                break;
+            case "price_desc":
+                values = values.OrderByDescending(x => x.Price).ToList();
+                break;
+            case "year_desc":
+                values = values.OrderByDescending(x => x.Year).ToList();
+                break;
+            case "year_asc":
+                values = values.OrderBy(x => x.Year).ToList();
+                break;
+            case "date_desc":
+                values = values.OrderByDescending(x => x.CreatedAt).ToList();
+                break;
+            case "date_asc":
+                values = values.OrderBy(x => x.CreatedAt).ToList();
+                break;
+            default:
+                // Varsayılan sıralama
+                break;
+        }
         return View(values);
     }
-
+    [Authorize(Roles = "Admin")]
     [HttpPost]
     public IActionResult Delete(int id)
     {
@@ -74,6 +99,7 @@ public class CarsController : Controller
     }
 
     // Araba ekleme formu (GET)
+    [Authorize(Roles = "Admin")]
     [HttpGet]
     public IActionResult Add()
     {
@@ -86,7 +112,7 @@ public class CarsController : Controller
     public IActionResult Add(Cars car, List<IFormFile> carImages)
     {
         car.CarId = 0;
-        car.CreatedAt = DateTime.UtcNow; 
+        car.CreatedAt = DateTime.UtcNow;
         if (ModelState.IsValid)
         {
             // Arabayı kaydet
@@ -123,7 +149,7 @@ public class CarsController : Controller
         ViewBag.Brands = _brandService.GetAllBrands();
         return View(car);
     }
-
+    [Authorize(Roles = "Admin")]
     [HttpGet]
     public IActionResult Edit(int id)
     {
@@ -135,7 +161,6 @@ public class CarsController : Controller
         ViewBag.Models = _modelsService.GetModelBrandId(car.BrandId);
         return View(car);
     }
-
     [HttpPost]
     public IActionResult Edit(Cars car)
     {
@@ -150,5 +175,37 @@ public class CarsController : Controller
         return View(car);
     }
 
-   
+    // Yeni: Sonsuz kaydırma için partial view dönen action
+    [HttpGet]
+    public IActionResult LoadMore(int page = 1, int pageSize = 12, string sortOrder = null)
+    {
+        var cars = _carsService.GetAllCars();
+        switch (sortOrder)
+        {
+            case "price_asc":
+                cars = cars.OrderBy(x => x.Price).ToList();
+                break;
+            case "price_desc":
+                cars = cars.OrderByDescending(x => x.Price).ToList();
+                break;
+            case "year_desc":
+                cars = cars.OrderByDescending(x => x.Year).ToList();
+                break;
+            case "year_asc":
+                cars = cars.OrderBy(x => x.Year).ToList();
+                break;
+            case "date_desc":
+                cars = cars.OrderByDescending(x => x.CreatedAt).ToList();
+                break;
+            case "date_asc":
+                cars = cars.OrderBy(x => x.CreatedAt).ToList();
+                break;
+            default:
+                // Varsayılan sıralama
+                break;
+        }
+        var pagedCars = cars.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        return PartialView("_CarCardPartial", pagedCars);
+    }
+
 }

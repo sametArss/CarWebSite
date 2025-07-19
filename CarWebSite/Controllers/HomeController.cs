@@ -2,6 +2,7 @@ using System.Diagnostics;
 using BusiniessLayer.Abstract;
 using CarWebSite.Models;
 using EntityLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -68,7 +69,7 @@ namespace CarWebSite.Controllers
             var value = _messageService.GetAll();
             return View(value);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult DeleteContact(int id)
         {
@@ -76,7 +77,7 @@ namespace CarWebSite.Controllers
             TempData["Delete"] = "Mesaj silindi.";
             return RedirectToAction("ListContact");
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult MarkAsRead(int id)
         {
@@ -99,7 +100,7 @@ namespace CarWebSite.Controllers
         {
             return View();
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult UpdateAbout([FromBody] string aboutMessage)
         {

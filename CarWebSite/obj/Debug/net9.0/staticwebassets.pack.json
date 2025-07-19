@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\CarWebSite.rzt9065i9a.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\css\\auth.css",
+      "PackagePath": "staticwebassets\\css\\auth.css"
+    },
+    {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -203,6 +207,10 @@
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\images\\rasa-logo.png",
+      "PackagePath": "staticwebassets\\images\\rasa-logo.png"
     },
     {
       "Id": "C:\\Users\\Samet\\Desktop\\CarWebSite\\CarWebSite\\wwwroot\\js\\site.js",

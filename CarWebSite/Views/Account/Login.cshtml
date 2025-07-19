@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="~/css/auth.css" />
+@model CarWebSite.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Giriş Yap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="auth-bg">
+    <div class="auth-card">
+        <img src="/images/rasa-logo.png" alt="RASA OTO GALERİ" class="auth-logo" />
+        <div class="auth-title">Giriş Yap</div>
+        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+        <form asp-action="Login" method="post" autocomplete="off">
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control bg-dark text-light border-0 shadow-sm" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control bg-dark text-light border-0 shadow-sm" />
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+            <div class="form-check mb-3">
+                <input asp-for="RememberMe" class="form-check-input" />
+                <label asp-for="RememberMe" class="form-check-label"></label>
+            </div>
+            <button type="submit" class="btn auth-btn w-100 py-2 mb-2">Giriş Yap</button>
+        </form>
+        <div class="text-center mt-2">
+            <a asp-action="Register" class="auth-link">Hesabınız yok mu? Kayıt Olun</a>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} 
